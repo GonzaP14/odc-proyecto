@@ -34,10 +34,21 @@
 		<Unit filename="convert.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="metodoDivision.c">
+			<Option compilerVar="CC" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="metodoDivision.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Unit filename="metodoMultiplicacion.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="metodoMultiplicacion.h" />
+		<Unit filename="validacion.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="validacion.h" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
