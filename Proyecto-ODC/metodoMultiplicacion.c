@@ -1,38 +1,37 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include <math.h>
 
-double * cantidadCaracteresNumero(char * numero , int * baseInicio ){
-    double * resultado = (double *) malloc(sizeof(double));
-    *resultado = -1.0f;
-    char * numeroAux = numero;
-    while ( (*numeroAux) != '\0' ){
-        *resultado = *resultado + 1;
-        numeroAux++;
-    }
-    return resultado;
-}
+int * metodoMultiplicacion (char * numero , int * baseInicio ){
+    char * numeroAux;
+    int * digitoActual;
+    int * cantidadCaracteres;
+    int * resultado;
+    int * pot;
 
-double * metodoMultiplicacion(char * numero , int * baseInicio ){
-    char* numeroAux;
-    double* digitoActual;
-    double* cantidadCaracteres;
-    double* resultado;
-    resultado = (double *) malloc(sizeof(double));
-    digitoActual = (double *) malloc(sizeof(double));
+    resultado = (int *) malloc (sizeof(int));
+    digitoActual = (int *) malloc (sizeof(int));
+    cantidadCaracteres = (int *) malloc (sizeof(int));
+    pot = (int *) malloc (sizeof(int));
+
     *resultado = 0;
     *digitoActual = 0;
     numeroAux = numero;
-    cantidadCaracteres = cantidadCaracteresNumero(numero , baseInicio );
-    while( *cantidadCaracteres >= 0.0f ){
+    * cantidadCaracteres = strlen (numero) - 1;
+
+    while (*cantidadCaracteres >= 0) {
         *digitoActual = *numeroAux - '0';
-        *resultado = *resultado + (*digitoActual) * (pow(8, *cantidadCaracteres));
-        *cantidadCaracteres = (*cantidadCaracteres) - 1.0f ;
-        numeroAux++;
+        *pot = floor (pow (*baseInicio, *cantidadCaracteres));
+        *resultado = *resultado + (*digitoActual) * (*pot);
+        *cantidadCaracteres = *cantidadCaracteres - 1;
+        numeroAux ++;
     }
-    free(cantidadCaracteres);
+
+    free (digitoActual);
+    free (cantidadCaracteres);
+    free (pot);
+
     return resultado;
 }
-
-

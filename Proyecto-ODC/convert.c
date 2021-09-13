@@ -3,12 +3,12 @@
 
 int main () {
     int base = 8;
-    char num [] = "7654";
+    char num [] = "1672";
 
     char * np = &num ;
-    double * res;
+    int * res;
 
     res = metodoMultiplicacion(np , &base);
-    printf("%lf" , *res);
+    printf("%i" , *res);
     return 0;
 }
