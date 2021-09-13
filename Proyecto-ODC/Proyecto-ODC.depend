@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1631566954 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\validacion.c
+	<stdio.h>
+	<stdlib.h>
+
+1631566016 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\convert.c
+	<stdio.h>
+	<stdlib.h>
+	"validacion.h"
+
+1631562191 c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\validacion.h
+
