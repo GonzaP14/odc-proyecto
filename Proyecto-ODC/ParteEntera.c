@@ -5,7 +5,8 @@
 #include "metodoMultiplicacion.h"
 #include "metodoDivision.h"
 
-// Puede ser void tmb
+
+
 char * cambiarBaseParteEntera (char * numero, short * baseSource, short * baseDestination) {
     int * check;
     long * resultado;
