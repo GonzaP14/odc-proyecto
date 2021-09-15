@@ -1,11 +1,12 @@
 # depslib dependency file v1.0
-1631567576 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\validacion.c
+1631742763 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\validacion.c
 	<stdio.h>
 	<stdlib.h>
 
-1631573752 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\convert.c
+1631744028 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\convert.c
 	<stdio.h>
 	<stdlib.h>
+	"metodoMultiplicacion.h"
 
 1631562191 c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\validacion.h
 
@@ -23,9 +24,11 @@
 	<stdio.h>
 	<stdlib.h>
 
-1631573478 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metodomultiplicacion.c
+1631743707 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metodomultiplicacion.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<math.h>
+
+1631743853 c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metodomultiplicacion.h
 

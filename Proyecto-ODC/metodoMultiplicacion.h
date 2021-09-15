@@ -1,6 +1,6 @@
 #ifndef METODOMULTIPLICACION_H_INCLUDED
 #define METODOMULTIPLICACION_H_INCLUDED
 
-int* metodoMultiplicacion(char * numero , int * baseInicio );
+long * parteEnteraSourceA10 (char * numero , short * baseInicio );
 
 #endif // METODOMULTIPLICACION_H_INCLUDED
