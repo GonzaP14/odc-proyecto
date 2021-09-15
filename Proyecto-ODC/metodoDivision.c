@@ -1,37 +1,61 @@
-char * metodoDivision(int* numero , int* baseDestino ){
-    int* numeroAux;
-    int* sizeNumero;
+#include <stdio.h>
+#include <stdlib.h>
+
+void convertirLetra ( char* numero ){
     char* resultado;
-    numeroAux = numero;
-    *cocienteDivision = 0;
-    *sizeNumero = 0;
-    resultado = (char*) malloc(sizeof(char));
-    while( *numeroAux > 0 ){
-        if(*baseDestino <= 10)
-            *resultado = *numeroAux % 10;
-        else
-            convertirLetra(resultado);
-        *numeroAux = *numeroAux / 10;
-        resultado++;
-        *sizeNumero++;
+    resultado = numero;
+    if(*numero >= 10 && *numero < 16){
+        *resultado = 'A' + *numero - 10;
     }
-    invertirNumero(resultado , sizeNumero);
-    return resultado;
+    else
+        *resultado = 'j';
 }
 
-char * convertirLetra ( char* numero ){
-    char* resultado;
-    *resultado = 'A' + *numero - 10;
-    return resultado;
-}
-
-void invertirNumero(char* numero , int* sizeNumero ){
+void invertirNumero(char* numero , short int* sizeNumero ){
     char* aux;
-    *sizeNumero--;
-    while(*sizeNumero / 2 != 0){
+    char* cola;
+    aux = (char*) malloc(sizeof(char));
+    cola = numero + *(sizeNumero) - 1;
+    while( numero != cola ){
         *aux = *numero;
-        *numero = (*numero) + (*sizeNumero);
-        (*numero) + (*sizeNumero) = *aux;
-        *sizeNumero++;
+        *numero = *cola;
+        *cola = *aux;
+        if((++numero) != cola)
+            cola--;
     }
+    free(aux);
 }
+
+char * metodoDivision(long int* numero , short int* baseDestino , short int* mostrarPasos ){
+    long int* numeroAux;
+    short int* sizeNumero;
+    char* resultado;
+    sizeNumero = (short int*) malloc(sizeof(short int));
+    resultado = (char*) malloc(sizeof(char));
+    numeroAux = numero;
+    *sizeNumero = 0;
+
+    while( *numeroAux > 0 && *sizeNumero <= 11 ){
+        *resultado = *numeroAux % *baseDestino;
+        if( *resultado >= 10 && *baseDestino > 10){
+            convertirLetra(resultado);
+            printf("%c \n" , *resultado);
+        }
+        *numeroAux /= *baseDestino;
+        resultado++;
+        *sizeNumero+= 1;
+    }
+    //Vuelvo el resultado a su posicion inicial osea a resultado[0]
+    resultado -= *sizeNumero ;
+    if( *sizeNumero > 11 ){
+        free(resultado);
+        resultado = (char*) malloc(sizeof(char));
+        *resultado = 'j';
+    }
+    else{
+        invertirNumero(resultado , sizeNumero);
+    }
+    free(sizeNumero);
+    return resultado;
+}
+

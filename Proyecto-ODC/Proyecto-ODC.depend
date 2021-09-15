@@ -13,19 +13,26 @@
 	<stdio.h>
 	<stdlib.h>
 
-1631574048 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metodomultiplicacion.c
+1631574580 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metodomultiplicacion.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<math.h>
 
-1631574170 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\convert.c
+1631745429 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\convert.c
 	<stdio.h>
 	<stdlib.h>
+	"metodoDivision.h"
 
 1631573478 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metodomultiplicacion.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<math.h>
+
+1631745439 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metododivision.c
+	<stdio.h>
+	<stdlib.h>
+
+1631742352 c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metododivision.h
 
