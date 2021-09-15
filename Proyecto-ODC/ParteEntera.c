@@ -5,8 +5,6 @@
 #include "metodoMultiplicacion.h"
 #include "metodoDivision.h"
 
-
-
 char * cambiarBaseParteEntera (char * numero, short * baseSource, short * baseDestination) {
     int * check;
     long * resultado;
