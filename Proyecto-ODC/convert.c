@@ -1,9 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "metodoDivisionPE.h"
+#include "metodoDivisionPF.h"
 int main () {
     //Prueba metodoDivisionPE
-    short int* base;
+    /*short int* base;
     long int* numero;
     short int* hola;
     numero = (long int*) malloc(sizeof(long int));
@@ -20,25 +21,23 @@ int main () {
     free(res);
     free(numero);
     free(base);
-    free(hola);
+    free(hola);*/
     //Prueba metodoDivisionPF
-    /*short int* baseOrigen;
+    short int* baseOrigen;
     short int* chau;
     double* resultado;
-    char numeroAIngresar[] = "7632";
     char* np;
     np = (char*) malloc(sizeof(char));
-    np = &numeroAIngresar[0];
+    *np = "7632";
     chau = (short int*) malloc(sizeof(short int));
     baseOrigen = (short int*) malloc(sizeof(short int));
     *chau = 1;
     *baseOrigen = 8;
-    printf("%c \n" , *numeroAIngresar );
     resultado = metodoDivisionPF(np,baseOrigen,chau);
     printf("%lf" , *resultado);
     free(np);
     free(baseOrigen);
     free(resultado);
-    free(chau);*/
+    free(chau);
     return 0;
 }
