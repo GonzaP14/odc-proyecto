@@ -1,9 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "validacion.h";
-#include "metodoMultiplicacion.h"
-#include "metodoDivision.h"
+
 
 char * cambiarBaseParteEntera (char * numero, short * baseSource, short * baseDestination) {
     int * check;
@@ -16,6 +14,6 @@ char * cambiarBaseParteEntera (char * numero, short * baseSource, short * baseDe
     } else {
         *resultado = parteEnteraSourceA10 (numero, baseSource);
         // parteEntera10ADestination (resultado, baseDestination);
-        verificarResultadoParteEntera (resultado, baseDestination);
+        //verificarResultadoParteEntera (resultado, baseDestination);
     }
 }

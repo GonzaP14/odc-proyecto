@@ -34,12 +34,16 @@ char * metodoDivision(long int* numero , short int* baseDestino , short int* mos
     resultado = (char*) malloc(sizeof(char));
     numeroAux = numero;
     *sizeNumero = 0;
-
-    while( *numeroAux > 0 && *sizeNumero <= 11 ){
+    //Preguntar a gonza si quiere sacar lo del sizeNumero
+    while( *numeroAux > 0  && *sizeNumero < 11){
+        printf("%i " ,*sizeNumero);
         *resultado = *numeroAux % *baseDestino;
+        printf("%i \n", *resultado);
         if( *resultado >= 10 && *baseDestino > 10){
             convertirLetra(resultado);
-            printf("%c \n" , *resultado);
+        }
+        else{
+            *resultado = *resultado + '0';
         }
         *numeroAux /= *baseDestino;
         resultado++;
@@ -47,7 +51,7 @@ char * metodoDivision(long int* numero , short int* baseDestino , short int* mos
     }
     //Vuelvo el resultado a su posicion inicial osea a resultado[0]
     resultado -= *sizeNumero ;
-    if( *sizeNumero > 11 ){
+    if( *sizeNumero >= 11 ){
         free(resultado);
         resultado = (char*) malloc(sizeof(char));
         *resultado = 'j';

@@ -5,7 +5,7 @@
 
 void convertirCaracter (long * digitoActual, char * numeroAux) {
     switch (*numeroAux) {
-        case '1': *digitoActual = 1;break;
+        case '1': *digitoActual = 1; break;
         case '2': *digitoActual = 2; break;
         case '3': *digitoActual = 3; break;
         case '4': *digitoActual = 4; break;
