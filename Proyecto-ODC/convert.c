@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include "metodoDivisionPE.h"
 int main () {
     //Prueba metodoDivisionPE
     short int* base;
@@ -9,13 +10,12 @@ int main () {
     base = (short int*) malloc(sizeof(short int));
     hola = (short int*) malloc(sizeof(short int));
     *hola = 1;
-    *numero = 10001;
+    *numero = 32680;
     *base = 16;
     char * res;
-    res = metodoDivision(numero,base,hola);
+    res = metodoDivisionPE(numero,base,hola);
     for(int i = 0;i < 4 ; i++){
-        printf("%c" , *res);
-        res+=1;
+        printf("%c" , *(res + i));
     }
     free(res);
     free(numero);

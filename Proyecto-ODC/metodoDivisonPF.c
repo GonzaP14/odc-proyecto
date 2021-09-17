@@ -6,7 +6,7 @@ double * metodoDivisionPF(char * parteFraccionaria , short int * baseOrigen , sh
     short int* contador;
     double* resultado;
     short int* digito;
-    resultado = (double *) malloc(sizeof(double));
+    resultado = (double *) malloc(4 * sizeof(double));
     sizeFraccion = (short int*) malloc(sizeof(short int));
     contador = (short int*) malloc(sizeof(short int));
     *sizeFraccion = strlen(parteFraccionaria);

@@ -26,7 +26,7 @@ void invertirNumero(char* numero , short int* sizeNumero ){
     free(aux);
 }
 
-char * metodoDivision(long int* numero , short int* baseDestino , short int* mostrarPasos ){
+char * metodoDivisionPE(long int* numero , short int* baseDestino , short int* mostrarPasos ){
     long int* numeroAux;
     short int* sizeNumero;
     char* resultado;
@@ -34,11 +34,8 @@ char * metodoDivision(long int* numero , short int* baseDestino , short int* mos
     resultado = (char*) malloc(sizeof(char));
     numeroAux = numero;
     *sizeNumero = 0;
-    //Preguntar a gonza si quiere sacar lo del sizeNumero
-    while( *numeroAux > 0  && *sizeNumero < 11){
-        printf("%i " ,*sizeNumero);
+    while( *numeroAux > 0 ){
         *resultado = *numeroAux % *baseDestino;
-        printf("%i \n", *resultado);
         if( *resultado >= 10 && *baseDestino > 10){
             convertirLetra(resultado);
         }
@@ -51,14 +48,7 @@ char * metodoDivision(long int* numero , short int* baseDestino , short int* mos
     }
     //Vuelvo el resultado a su posicion inicial osea a resultado[0]
     resultado -= *sizeNumero ;
-    if( *sizeNumero >= 11 ){
-        free(resultado);
-        resultado = (char*) malloc(sizeof(char));
-        *resultado = 'j';
-    }
-    else{
-        invertirNumero(resultado , sizeNumero);
-    }
+    invertirNumero(resultado , sizeNumero);
     free(sizeNumero);
     return resultado;
 }
