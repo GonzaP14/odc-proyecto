@@ -39,7 +39,7 @@ char * parteFraccionariaSourceA10 (double * numero, short * baseDestino) {
         resultado ++;
         *cantidadDigitos = *cantidadDigitos + 1;
         *limite = *limite - 1;
-        printf ("%i", *digitoActual);
+        //printf ("%i", *digitoActual);
     }
 
     resultado = resultado - *cantidadDigitos;
