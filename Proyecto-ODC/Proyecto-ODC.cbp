@@ -34,21 +34,25 @@
 		<Unit filename="ParteEntera.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="Validacion.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="Validacion.h" />
 		<Unit filename="convert.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="metodoDivision.h" />
 		<Unit filename="metodoDivisionPE.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="metodoMultiplicacion.c">
+		<Unit filename="metodoDivisionPE.h" />
+		<Unit filename="metodoMultiplicacionPE.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="metodoMultiplicacion.h" />
-		<Unit filename="validacion.c">
+		<Unit filename="metodoMultiplicacionPE.h" />
+		<Unit filename="metodoMultiplicacionPF.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="validacion.h" />
+		<Unit filename="metodoMultiplicacionPF.h" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

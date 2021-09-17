@@ -1,13 +1,14 @@
 # depslib dependency file v1.0
-1631567576 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\validacion.c
+1631744796 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\validacion.c
 	<stdio.h>
 	<stdlib.h>
 
-1631573752 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\convert.c
+1631834120 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\convert.c
 	<stdio.h>
 	<stdlib.h>
+	"metodoMultiplicacionPF.h"
 
-1631562191 c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\validacion.h
+1631744505 c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\validacion.h
 
 1631568402 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\validacion.c
 	<stdio.h>
@@ -35,4 +36,30 @@
 	<stdlib.h>
 
 1631742352 c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metododivision.h
+
+1631746186 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metododivisionpe.c
+	<stdio.h>
+	<stdlib.h>
+
+1631743707 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metodomultiplicacionpe.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+
+1631749418 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\parteentera.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Validacion.h"
+	"metodoMultiplicacionPE.h"
+
+1631743853 c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metodomultiplicacionpe.h
+
+1631834244 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metodomultiplicacionpf.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1631750035 c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metodomultiplicacionpf.h
 
