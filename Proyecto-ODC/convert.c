@@ -1,9 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "metodoMultiplicacionPF.h"
+#include "metodoDivisionPF.h"
 
 int main () {
 
+    /*
     char * resultado;
     double * numerito;
     short * base;
@@ -23,6 +25,18 @@ int main () {
     }
 
     free (resultado);
+    */
+
+    char numero [4] = "7632";
+    char * pnum = &numero [0];
+
+    short base = 8;
+    short * pb = &base;
+
+    short uno = 1;
+    short * pu = &uno;
+
+    printf ("Numero %s en base [%i] es igual a %lf en base 10.", numero, *pb, *metodoDivisionPF (pnum, pb, pu));
 
     return 0;
 }
