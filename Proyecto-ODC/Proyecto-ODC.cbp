@@ -45,6 +45,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="metodoDivisionPE.h" />
+		<Unit filename="metodoDivisionPF.h" />
+		<Unit filename="metodoDivisonPF.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="metodoMultiplicacionPE.c">
 			<Option compilerVar="CC" />
 		</Unit>

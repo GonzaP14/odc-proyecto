@@ -31,7 +31,6 @@ double * metodoDivisionPF(char * parteFraccionaria , short int * baseOrigen , sh
         *contador+= 1;
         parteFraccionaria--;
     }
-    printf("%lf" , *resultado);
     free(digito);
     free(sizeFraccion);
     free(contador);
