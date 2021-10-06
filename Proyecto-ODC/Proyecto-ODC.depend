@@ -88,6 +88,7 @@
 
 1631743853 c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metodomultiplicacionpe.h
 
+<<<<<<< HEAD
 1631922694 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metodomultiplicacionpf.c
 	<stdio.h>
 	<stdlib.h>
@@ -100,4 +101,10 @@
 1631920553 c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metodomultiplicacionpf.h
 
 1631751352 c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metododivisionpf.h
+=======
+1631922653 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metododivisonpf.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+>>>>>>> e36882544bb305e966887c85ccb69eb80c9a5d8a
 
