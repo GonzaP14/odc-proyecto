@@ -4,8 +4,9 @@
 #include "Validacion.h"
 
 char * cambiarBaseParteEntera (char * numero, short * baseSource, short * baseDestination) {
-    short * check;
-    long * resultado;
+    char * resultado;
 
-    check = verificarNumero(numero, baseSource)
+    resultado = (char *) malloc (100 * sizeof (char));
+
+    return resultado;
 }

@@ -3,10 +3,11 @@
 	<stdio.h>
 	<stdlib.h>
 
-1631920766 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\convert.c
+1633553931 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\convert.c
 	<stdio.h>
 	<stdlib.h>
 	"metodoMultiplicacionPF.h"
+	"metodoDivisionPF.h"
 
 1631744505 c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\validacion.h
 
@@ -66,29 +67,28 @@
 	<stdio.h>
 	<stdlib.h>
 
-1631920367 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metodomultiplicacionpe.c
+1633555794 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metodomultiplicacionpe.c
 	<stdio.h>
 	<stdlib.h>
-	<string.h>
 	<math.h>
 
-1631920934 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metodomultiplicacionpf.c
+1633556881 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metodomultiplicacionpf.c
 	<stdio.h>
 	<stdlib.h>
 	<math.h>
 
 1631750035 c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metodomultiplicacionpf.h
 
-1631920408 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\parteentera.c
+1633556853 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\parteentera.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"Validacion.h"
-	"metodoMultiplicacionPE.h"
 
 1631743853 c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metodomultiplicacionpe.h
 
-<<<<<<< HEAD
+1631743853 D
+
 1631922694 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metodomultiplicacionpf.c
 	<stdio.h>
 	<stdlib.h>
@@ -101,10 +101,13 @@
 1631920553 c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metodomultiplicacionpf.h
 
 1631751352 c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metododivisionpf.h
-=======
-1631922653 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metododivisonpf.c
+
+1633553931 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metododivisonpf.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
->>>>>>> e36882544bb305e966887c85ccb69eb80c9a5d8a
+
+1631922653 882544bb305e966887c85ccb69eb80c9a5d8a
+
+1631920367 c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metododivisionpf.h
 
