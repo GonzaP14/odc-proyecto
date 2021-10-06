@@ -7,8 +7,6 @@ void convertirLetra ( char* numero ){
     if(*numero >= 10 && *numero < 16){
         *resultado = 'A' + *numero - 10;
     }
-    else
-        *resultado = 'j';
 }
 
 void invertirNumero(char* numero , short int* sizeNumero ){
@@ -35,6 +33,9 @@ char * metodoDivisionPE(long int* numero , short int* baseDestino , short int* m
     numeroAux = numero;
     *sizeNumero = 0;
     while( *numeroAux > 0 ){
+        if( *mostrarPasos == 1){
+            printf("X%hd %ld mod %hd", *sizeNumero , *numeroAux , *baseDestino);
+        }
         *resultado = *numeroAux % *baseDestino;
         if( *resultado >= 10 && *baseDestino > 10){
             convertirLetra(resultado);
@@ -43,6 +44,9 @@ char * metodoDivisionPE(long int* numero , short int* baseDestino , short int* m
             *resultado = *resultado + '0';
         }
         *numeroAux /= *baseDestino;
+        if( *mostrarPasos == 1 ){
+            printf("=%c y Q%hd =(%ld - %c) / %hd \n", *resultado , *sizeNumero , *numeroAux , *resultado , *baseDestino );
+        }
         resultado++;
         *sizeNumero+= 1;
     }
