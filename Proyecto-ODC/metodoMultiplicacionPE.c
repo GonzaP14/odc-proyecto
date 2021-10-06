@@ -42,7 +42,7 @@ long * parteEnteraOrigenA10 (char * numero , short * baseInicio, short * mostrar
     resultado = (long *) malloc (sizeof(long));
     pot = (long *) malloc (sizeof(long));
     cantidadDigitos = (short *) malloc (sizeof (short));
-
+    //Aca se deberia hacer numero Aux = numero y asi no seria necesario el malloc de numeroAux,que de hecho creo que se la vamos a tener que hacer antes de pasarselo por parametro desde convert
     * numeroAux = * numero;
     * digitoActual = 0;
     * cantidadCaracteres = -1;
@@ -51,9 +51,15 @@ long * parteEnteraOrigenA10 (char * numero , short * baseInicio, short * mostrar
     * cantidadDigitos = 0;
 
     while (*cantidadCaracteres >= 0) {
+        if(*mostrar == 1){
+            printf("%ld + %c x %hd^%hd " , *resultado , *numeroAux , *baseInicio , *cantidadCaracteres );
+        }
         convertirCaracter (digitoActual, numeroAux);
         * pot = (pow (* baseInicio, * cantidadCaracteres));
         * resultado = * resultado + ((* digitoActual) * (* pot));
+        if(*mostrar == 1){
+            printf("= %ld \n" , *resultado );
+        }
         * cantidadCaracteres = * cantidadCaracteres - 1;
         numeroAux ++;
     }
