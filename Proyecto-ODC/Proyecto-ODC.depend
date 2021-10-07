@@ -20,11 +20,9 @@
 	<string.h>
 	<math.h>
 
-1631923450 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\convert.c
+1633628828 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\convert.c
 	<stdio.h>
 	<stdlib.h>
-	"metodoMultiplicacionPF.h"
-	"metodoDivisionPF.h"
 
 1631573478 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metodomultiplicacion.c
 	<stdio.h>
@@ -38,20 +36,20 @@
 
 1631742352 c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metododivision.h
 
-1633559115 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metododivisionpe.c
+1633628729 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metododivisionpe.c
 	<stdio.h>
 	<stdlib.h>
 
-1633555847 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metododivisonpf.c
+1633627591 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metododivisonpf.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 
-1631749168 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metodomultiplicacionpe.c
+1633628961 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metodomultiplicacionpe.c
 	<stdio.h>
 	<stdlib.h>
-	<string.h>
 	<math.h>
+	<string.h>
 
 1633559321 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\parteentera.c
 	<stdio.h>

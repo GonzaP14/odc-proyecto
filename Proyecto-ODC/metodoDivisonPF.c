@@ -23,7 +23,7 @@ double * metodoDivisionPF(char * parteFraccionaria , short int * baseOrigen , sh
     *contador = 0;
     *resultado = 0.00;
     *digito = 0;
-    cantidadCaracteresNumero( parteFraccionaria, sizeFraccion );
+    *sizeFraccion = strlen(parteFraccionaria) - 1;
     parteFraccionaria = parteFraccionaria + *sizeFraccion - 1;
     while( *contador < *sizeFraccion ){
         if(*parteFraccionaria >= '0' && *parteFraccionaria <= '9' ){

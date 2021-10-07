@@ -34,7 +34,7 @@ char * metodoDivisionPE(long int* numero , short int* baseDestino , short int* m
     *sizeNumero = 0;
     while( *numeroAux > 0 ){
         if( *mostrarPasos == 1){
-            printf("X%hd %ld mod %hd", *sizeNumero , *numeroAux , *baseDestino);
+            printf("X%hd = %ld mod %hd", *sizeNumero , *numeroAux , *baseDestino);
         }
         *resultado = *numeroAux % *baseDestino;
         if( *resultado >= 10 && *baseDestino > 10){
@@ -43,9 +43,12 @@ char * metodoDivisionPE(long int* numero , short int* baseDestino , short int* m
         else{
             *resultado = *resultado + '0';
         }
+        if( *mostrarPasos == 1 ){
+            printf(" = %c y Q%hd = (%ld - %c) / %hd ", *resultado , *sizeNumero , *numeroAux , *resultado , *baseDestino );
+        }
         *numeroAux /= *baseDestino;
         if( *mostrarPasos == 1 ){
-            printf("=%c y Q%hd =(%ld - %c) / %hd \n", *resultado , *sizeNumero , *numeroAux , *resultado , *baseDestino );
+            printf("= %ld \n" , *numeroAux );
         }
         resultado++;
         *sizeNumero+= 1;
