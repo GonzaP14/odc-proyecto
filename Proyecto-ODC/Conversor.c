@@ -40,39 +40,42 @@ char * parteFraccionaria (char * numero) {
     }
 
     while (*numero != '\0') {
-        *numPE = *numero;
+        *numPF = *numero;
         *contador = *contador + 1;
-        numPE ++;
+        numPF ++;
         numero ++;
     }
 
     numero -= *contador;
     free (contador);
 
-    return numPE;
+    return numPF;
 }
 
-char * convertirParteEntera (char * numPE, short * baseOrigen, short * baseDestino) {
+char * convertirParteEntera (char * numPE, short * baseOrigen, short * baseDestino, short * mostrar) {
     char * resultado;
     long * auxiliar;
 
-    auxiliar = parteEnteraOrigenA10 (numPE);
-    resultado = parteEntera10aDestino (auxiliar);
+    auxiliar = parteEnteraOrigenA10 (numPE, baseOrigen, mostrar);
+    resultado = parteEntera10aDestino (auxiliar, baseDestino, mostrar);
 
     return resultado;
 }
 
-char * convertirParteFraccionaria (char * numPF, short * baseOrigen, short * baseDestino) {
+char * convertirParteFraccionaria (char * numPF, short * baseOrigen, short * baseDestino, short * mostrar) {
+    short * precision;
     char * resultado;
     long * auxiliar;
 
-    auxiliar = parteFraccionariaOrigenA10 (numPF);
-    resultado = parteFraccionaria10ADestino (auxiliar);
+     precision = (short *) malloc (sizeof (short));
+    *precision = 10;
+    auxiliar = parteFraccionariaOrigenA10 (numPF, baseOrigen, mostrar);
+    resultado = parteFraccionaria10ADestino (auxiliar, baseDestino, precision, mostrar);
 
     return resultado;
 }
 
-char * convertir (char * numero, short * baseOrigen, short * baseDestino) {
+char * convertir (char * numero, short * baseOrigen, short * baseDestino, short * mostrar) {
     short * check;
     char * numPE;
     char * numPF;
@@ -80,15 +83,16 @@ char * convertir (char * numero, short * baseOrigen, short * baseDestino) {
     char * numPFConvertido;
     char * resultado;
 
-    resultado = malloc (100 * sizeof (char));
+    resultado = (char *) malloc (100 * sizeof (char));
+
     numPE = parteEntera (numero);
     numPF = parteFraccionaria (numero);
     check = (verificarNumero (numPE) && verificarNumero (numPF));
 
+
     if (*check == 1) {
-        numPEConvertido = convertirParteEntera (parteEntera);
-        numPFConvertido = convertirParteFraccionaria (parteFraccionaria);
-        resultado = str
+        numPEConvertido = convertirParteEntera (parteEntera, baseOrigen, baseDestino, mostrar);
+        numPFConvertido = convertirParteFraccionaria (parteFraccionaria, baseOrigen, baseDestino, mostrar);
 
         if (numPFConvertido == NULL) {
             resultado = numPEConvertido;

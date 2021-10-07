@@ -1,33 +1,29 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "metodoMultiplicacionPF.h"
+#include "Conversor.h"
 
 int main () {
-    double numero = 0.1234;
-    double * pnumero = &numero;
+    char numero [7] = "F0.123";
+    char * pNumero = &numero[0];
 
-    short baseDestino = 16;
+    short baseOrigen = 16;
+    short * pBaseOrigen = &baseOrigen;
+
+    short baseDestino = 2;
     short * pBaseDestino = &baseDestino;
 
-    short presicion = 4;
-    short * pPresicion = &presicion;
+    char * resultado = convertir (pNumero, pBaseOrigen, pBaseDestino);
+    int contador = 0;
 
-    short mostrar = 1;
-    short * pMostrar = &mostrar;
+    printf ("El número %s en base %hd es igual a ", numero, baseOrigen);
 
-    char * resultado;
-    resultado = parteFraccionaria10ADestino (pnumero, pBaseDestino, pPresicion, pMostrar);
-
-    printf ("El número %lf en base 10 es en base 16 igual a 0.", *pnumero);
-
-    for (int i = 0; i < presicion; i ++) {
+    while (*resultado != '\0') {
         printf ("%c", *resultado);
         resultado ++;
+        contador ++;
     }
-    printf (" \n");
 
-    resultado -= presicion;
-    free (resultado);
+    printf (" en base %hd. \n", baseDestino);
 
-    return 0;
+    return EXIT_SUCCESS;
 }

@@ -35,6 +35,7 @@
 		<Unit filename="Conversor.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="Conversor.h" />
 		<Unit filename="Validacion.c">
 			<Option compilerVar="CC" />
 		</Unit>
