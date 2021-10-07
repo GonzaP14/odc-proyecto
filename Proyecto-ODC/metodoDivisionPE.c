@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 void convertirLetra ( char* numero ){
     char* resultado;
@@ -7,21 +8,6 @@ void convertirLetra ( char* numero ){
     if(*numero >= 10 && *numero < 16){
         *resultado = 'A' + *numero - 10;
     }
-}
-
-void invertirNumero(char* numero , short int* sizeNumero ){
-    char* aux;
-    char* cola;
-    aux = (char*) malloc(sizeof(char));
-    cola = numero + *(sizeNumero) - 1;
-    while( numero != cola ){
-        *aux = *numero;
-        *numero = *cola;
-        *cola = *aux;
-        if((++numero) != cola)
-            cola--;
-    }
-    free(aux);
 }
 
 char * metodoDivisionPE(long int* numero , short int* baseDestino , short int* mostrarPasos ){
@@ -55,7 +41,7 @@ char * metodoDivisionPE(long int* numero , short int* baseDestino , short int* m
     }
     //Vuelvo el resultado a su posicion inicial osea a resultado[0]
     resultado -= *sizeNumero ;
-    invertirNumero(resultado , sizeNumero);
+    strrev(resultado);
     free(sizeNumero);
     return resultado;
 }
