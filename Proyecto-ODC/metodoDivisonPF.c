@@ -3,7 +3,7 @@
 #include <string.h>
 #include "metodosAuxiliares.h"
 
-double * parteFraccionariaOrigenA10 (char * parteFraccionaria , short int * baseOrigen , short int * mostrar){
+double * parteFraccionariaOrigenA10 (char * parteFraccionaria , short int * baseOrigen , short int * mostrarPasos){
     short int* sizeFraccion;
     short int* contador;
     double* resultado;

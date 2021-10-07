@@ -20,10 +20,10 @@
 	<string.h>
 	<math.h>
 
-1633635304 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\convert.c
+1633641871 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\convert.c
 	<stdio.h>
 	<stdlib.h>
-	"metodoMultiplicacionPF.h"
+	"Conversor.h"
 
 1631573478 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metodomultiplicacion.c
 	<stdio.h>
@@ -37,13 +37,13 @@
 
 1631742352 c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metododivision.h
 
-1633632329 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metododivisionpe.c
+1633640149 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metododivisionpe.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"metodosAuxiliares.h"
 
-1633636622 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metododivisonpf.c
+1633640253 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metododivisonpf.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -62,7 +62,7 @@
 	<string.h>
 	"Validacion.h"
 
-1631919826 c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metododivisionpe.h
+1633640149 c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metododivisionpe.h
 
 1633637870 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metododivisionpe.c
 	<stdio.h>
@@ -101,11 +101,11 @@
 
 1631745805 c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\validacion.h
 
-1631746204 c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metodomultiplicacionpe.h
+1633640149 c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metodomultiplicacionpe.h
 
 1633631084 c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metodomultiplicacionpf.h
 
-1631751352 c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metododivisionpf.h
+1633640149 c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metododivisionpf.h
 
 1633638083 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metododivisonpf.c
 	<stdio.h>
@@ -125,9 +125,15 @@
 	"metodoDivisionPE.h"
 	"metodoDivisionPF.h"
 
-1633632762 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\conversor.c
+1633641596 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\conversor.c
 	<stdio.h>
 	<stdlib.h>
+	<string.h>
+	"metodoMultiplicacionPE.h"
+	"metodoMultiplicacionPF.h"
+	"metodoDivisionPE.h"
+	"metodoDivisionPF.h"
+	"Validacion.h"
 
 1633632263 c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metodosauxiliares.h
 
@@ -146,4 +152,6 @@
 	<string.h>
 
 1633637870 c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metododivisionpe.h
+
+1633641867 c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\conversor.h
 

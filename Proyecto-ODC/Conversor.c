@@ -1,9 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "metodoMultiplicacionPE.h"
 #include "metodoMultiplicacionPF.h"
 #include "metodoDivisionPE.h"
 #include "metodoDivisionPF.h"
+#include "Validacion.h"
 
 char * parteEntera (char * numero) {
     char * numPE;
@@ -65,7 +67,7 @@ char * convertirParteEntera (char * numPE, short * baseOrigen, short * baseDesti
 char * convertirParteFraccionaria (char * numPF, short * baseOrigen, short * baseDestino, short * mostrar) {
     short * precision;
     char * resultado;
-    long * auxiliar;
+    double * auxiliar;
 
      precision = (short *) malloc (sizeof (short));
     *precision = 10;
@@ -77,6 +79,7 @@ char * convertirParteFraccionaria (char * numPF, short * baseOrigen, short * bas
 
 char * convertir (char * numero, short * baseOrigen, short * baseDestino, short * mostrar) {
     short * check;
+    short * check2;
     char * numPE;
     char * numPF;
     char * numPEConvertido;
@@ -87,12 +90,13 @@ char * convertir (char * numero, short * baseOrigen, short * baseDestino, short 
 
     numPE = parteEntera (numero);
     numPF = parteFraccionaria (numero);
-    check = (verificarNumero (numPE) && verificarNumero (numPF));
+    check = verificarNumero (numPE,baseOrigen);
+    check2 = verificarNumero (numPF,baseOrigen);
 
 
-    if (*check == 1) {
-        numPEConvertido = convertirParteEntera (parteEntera, baseOrigen, baseDestino, mostrar);
-        numPFConvertido = convertirParteFraccionaria (parteFraccionaria, baseOrigen, baseDestino, mostrar);
+    if (*check == 1 && *check2 == 1) {
+        numPEConvertido = convertirParteEntera (numPE, baseOrigen, baseDestino, mostrar);
+        numPFConvertido = convertirParteFraccionaria (numPF, baseOrigen, baseDestino, mostrar);
 
         if (numPFConvertido == NULL) {
             resultado = numPEConvertido;
@@ -100,29 +104,12 @@ char * convertir (char * numero, short * baseOrigen, short * baseDestino, short 
             resultado = strcat (strcat (numPEConvertido, "."), numPFConvertido);
         }
 
-        /*
-        while (*numPEConvertido != '\0') {
-            *resultado = *numPEConvertido;
-            numPEConvertido ++;
-            resultado ++;
-        }
-
-        if (numPFConvertido != NULL) {
-            *resultado = '.';
-            resultado ++;
-
-            while (*numPFConvertido != '\0') {
-                *resultado = *numPEConvertido;
-                numPFConvertido ++;
-                resultado ++;
-            }
-        }
-        */
-
     } else {
         printf ("El número no verifica las condiciones de su base origen: %i.", *baseOrigen);
         exit (EXIT_FAILURE);
     }
+    free(check);
+    return resultado;
 }
 
 
