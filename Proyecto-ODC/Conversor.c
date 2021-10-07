@@ -36,6 +36,7 @@ char * parteFraccionaria (char * numero) {
 
     while (*numero != '.') {
         numero ++;
+        *contador = *contador + 1;
     }
 
     while (*numero != '\0') {
@@ -58,17 +59,17 @@ char * convertirParteEntera (char * numPE, short * baseOrigen, short * baseDesti
     auxiliar = parteEnteraOrigenA10 (numPE);
     resultado = parteEntera10aDestino (auxiliar);
 
-    resultado;
+    return resultado;
 }
 
 char * convertirParteFraccionaria (char * numPF, short * baseOrigen, short * baseDestino) {
     char * resultado;
     long * auxiliar;
 
-    auxiliar = parteEnteraOrigenA10 (numPF);
-    resultado = parteEntera10aDestino (auxiliar);
+    auxiliar = parteFraccionariaOrigenA10 (numPF);
+    resultado = parteFraccionaria10ADestino (auxiliar);
 
-    resultado;
+    return resultado;
 }
 
 char * convertir (char * numero, short * baseOrigen, short * baseDestino) {
@@ -79,7 +80,7 @@ char * convertir (char * numero, short * baseOrigen, short * baseDestino) {
     char * numPFConvertido;
     char * resultado;
 
-    resultado = malloc (30 * sizeof (char));
+    resultado = malloc (100 * sizeof (char));
     numPE = parteEntera (numero);
     numPF = parteFraccionaria (numero);
     check = (verificarNumero (numPE) && verificarNumero (numPF));
@@ -87,7 +88,15 @@ char * convertir (char * numero, short * baseOrigen, short * baseDestino) {
     if (*check == 1) {
         numPEConvertido = convertirParteEntera (parteEntera);
         numPFConvertido = convertirParteFraccionaria (parteFraccionaria);
+        resultado = str
 
+        if (numPFConvertido == NULL) {
+            resultado = numPEConvertido;
+        } else {
+            resultado = strcat (strcat (numPEConvertido, "."), numPFConvertido);
+        }
+
+        /*
         while (*numPEConvertido != '\0') {
             *resultado = *numPEConvertido;
             numPEConvertido ++;
@@ -104,6 +113,7 @@ char * convertir (char * numero, short * baseOrigen, short * baseDestino) {
                 resultado ++;
             }
         }
+        */
 
     } else {
         printf ("El número no verifica las condiciones de su base origen: %i.", *baseOrigen);
