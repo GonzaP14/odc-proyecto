@@ -27,6 +27,7 @@ long * parteEnteraOrigenA10 (char * numero , short * baseInicio, short * mostrar
     *cantidadCaracteres = strlen(numeroAux) - 1;
 
     while (*cantidadCaracteres >= 0) {
+
         if(*mostrar == 1){
            printf("%ld + %c x %hd^%hd " , *resultado , *numeroAux , *baseInicio , *cantidadCaracteres );
         }

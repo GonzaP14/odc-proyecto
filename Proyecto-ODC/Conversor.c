@@ -31,26 +31,33 @@ char * parteEntera (char * numero) {
 char * parteFraccionaria (char * numero) {
     char * numPF;
     short * contador;
+    short * contadorNumPF;
 
     numPF = (char *) malloc (5 * sizeof (char));
-    contador = (short *) malloc (sizeof (contador));
+    contador = (short *) malloc (sizeof (short));
+    contadorNumPF = (short *) malloc (sizeof (short));
+
+    *contadorNumPF=0;
     *contador = 0;
 
     while (*numero != '.') {
         numero ++;
         *contador = *contador + 1;
     }
-
+    numero++;
+    *contador = *contador + 1;
     while (*numero != '\0') {
         *numPF = *numero;
+        *contadorNumPF = *contadorNumPF + 1;
         *contador = *contador + 1;
         numPF ++;
         numero ++;
     }
+    *numPF='\0';
     numero -= *contador;
-    numPF -= *contador;
+    numPF -= *contadorNumPF;
     free (contador);
-
+    free(contadorNumPF);
     return numPF;
 }
 
@@ -59,8 +66,15 @@ char * convertirParteEntera (char * numPE, short * baseOrigen, short * baseDesti
     long * auxiliar;
 
     auxiliar = parteEnteraOrigenA10 (numPE, baseOrigen, mostrar);
+    if(*mostrar == 1){
+        printf("\n");
+    }
     resultado = parteEntera10aDestino (auxiliar, baseDestino, mostrar);
+    if(*mostrar == 1){
+        printf("\n");
+    }
 
+    free(auxiliar);
     return resultado;
 }
 
@@ -69,11 +83,19 @@ char * convertirParteFraccionaria (char * numPF, short * baseOrigen, short * bas
     char * resultado;
     double * auxiliar;
 
-     precision = (short *) malloc (sizeof (short));
+    precision = (short*) malloc(sizeof(short));
+
     *precision = 10;
     auxiliar = parteFraccionariaOrigenA10 (numPF, baseOrigen, mostrar);
+    if(*mostrar == 1){
+        printf("\n");
+    }
     resultado = parteFraccionaria10ADestino (auxiliar, baseDestino, precision, mostrar);
-
+    if(*mostrar == 1){
+        printf("\n");
+    }
+    free(auxiliar);
+    free(precision);
     return resultado;
 }
 
@@ -92,8 +114,6 @@ char * convertir (char * numero, short * baseOrigen, short * baseDestino, short 
     numPF = parteFraccionaria (numero);
     check = verificarNumero (numPE,baseOrigen);
     check2 = verificarNumero (numPF,baseOrigen);
-    printf("%hd \n",*check);
-    printf("%hd \n",*check2);
     if (*check == 1 && *check2 == 1) {
         numPEConvertido = convertirParteEntera (numPE, baseOrigen, baseDestino, mostrar);
         numPFConvertido = convertirParteFraccionaria (numPF, baseOrigen, baseDestino, mostrar);

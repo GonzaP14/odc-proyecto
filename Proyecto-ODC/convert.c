@@ -12,7 +12,10 @@ int main () {
     short baseDestino = 2;
     short * pBaseDestino = &baseDestino;
 
-    char * resultado = convertir (pNumero, pBaseOrigen, pBaseDestino);
+    short mostrar = 1;
+    short * pMostrar = &mostrar;
+
+    char * resultado = convertir (pNumero, pBaseOrigen, pBaseDestino , pMostrar);
     int contador = 0;
 
     printf ("El número %s en base %hd es igual a ", numero, baseOrigen);

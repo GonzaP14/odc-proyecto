@@ -13,7 +13,6 @@ double * parteFraccionariaOrigenA10 (char * parteFraccionaria , short int * base
     sizeFraccion = (short int*) malloc(sizeof(short int));
     contador = (short int*) malloc(sizeof(short int));
     digito = (short int*) malloc(sizeof(short int));
-
     *sizeFraccion=0;
     *contador = 0;
     *resultado = 0.00;
@@ -24,17 +23,17 @@ double * parteFraccionariaOrigenA10 (char * parteFraccionaria , short int * base
     while( *contador < *sizeFraccion ){
         convertirCaracter( digito , parteFraccionaria );
         if(*mostrarPasos == 1){
-            printf("%hd x %hd ^ (%hd) " , *digito , *baseOrigen , *contador * (-1) - 1  );
+            printf("%hd x %hd ^ (%hd) " , *digito , *baseOrigen , *sizeFraccion *(-1));
         }
         if(*mostrarPasos == 1 && *contador+1 != *sizeFraccion){
             printf(" + ");
         }
         *resultado += *digito;
         *resultado /= *baseOrigen;
-        *contador+= 1;
+        *sizeFraccion-= 1;
         parteFraccionaria--;
     }
-
+    printf("\n");
     free(digito);
     free(sizeFraccion);
     free(contador);

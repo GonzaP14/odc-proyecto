@@ -20,7 +20,7 @@
 	<string.h>
 	<math.h>
 
-1633641987 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\convert.c
+1633643705 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\convert.c
 	<stdio.h>
 	<stdlib.h>
 	"Conversor.h"
@@ -37,19 +37,19 @@
 
 1631742352 c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metododivision.h
 
-1633640149 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metododivisionpe.c
+1633643921 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metododivisionpe.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"metodosAuxiliares.h"
 
-1633640253 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metododivisonpf.c
+1633645444 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metododivisonpf.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"metodosAuxiliares.h"
 
-1633633216 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metodomultiplicacionpe.c
+1633643595 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metodomultiplicacionpe.c
 	<stdio.h>
 	<stdlib.h>
 	<math.h>
@@ -125,7 +125,7 @@
 	"metodoDivisionPE.h"
 	"metodoDivisionPF.h"
 
-1633642647 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\conversor.c
+1633644940 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\conversor.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -153,5 +153,5 @@
 
 1633637870 c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metododivisionpe.h
 
-1633641867 c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\conversor.h
+1633643729 c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\conversor.h
 
