@@ -58,6 +58,10 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="metodoMultiplicacionPF.h" />
+		<Unit filename="metodosAuxiliares.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="metodosAuxiliares.h" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

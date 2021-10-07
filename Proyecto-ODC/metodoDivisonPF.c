@@ -3,7 +3,7 @@
 #include <string.h>
 #include "metodosAuxiliares.h"
 
-double * metodoDivisionPF(char * parteFraccionaria , short int * baseOrigen , short int * mostrar){
+double * parteFraccionariaOrigenA10 (char * parteFraccionaria , short int * baseOrigen , short int * mostrar){
     short int* sizeFraccion;
     short int* contador;
     double* resultado;
@@ -34,8 +34,10 @@ double * metodoDivisionPF(char * parteFraccionaria , short int * baseOrigen , sh
         *contador+= 1;
         parteFraccionaria--;
     }
+
     free(digito);
     free(sizeFraccion);
     free(contador);
+
     return resultado;
 }
