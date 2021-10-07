@@ -3,7 +3,7 @@
 	<stdio.h>
 	<stdlib.h>
 
-1633632900 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\convert.c
+1633634226 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\convert.c
 	<stdio.h>
 	<stdlib.h>
 	"metodoMultiplicacionPF.h"
@@ -64,16 +64,18 @@
 
 1631919826 c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metododivisionpe.h
 
-1633632406 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metododivisionpe.c
+1633633341 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metododivisionpe.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
+	"metodosAuxiliares.h"
 
-1633632406 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metodomultiplicacionpe.c
+1633633341 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metodomultiplicacionpe.c
 	<stdio.h>
 	<stdlib.h>
 	<math.h>
 	<string.h>
+	"metodosAuxiliares.h"
 
 1633632828 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metodomultiplicacionpf.c
 	<stdio.h>
@@ -105,16 +107,17 @@
 
 1631751352 c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metododivisionpf.h
 
-1633632406 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metododivisonpf.c
+1633633832 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metododivisonpf.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
+	"metodosAuxiliares.h"
 
 1631922653 882544bb305e966887c85ccb69eb80c9a5d8a
 
 1631920367 c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metododivisionpf.h
 
-1633631109 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\conversor.c
+1633634493 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\conversor.c
 	<stdio.h>
 	<stdlib.h>
 
@@ -125,6 +128,14 @@
 1633632263 c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metodosauxiliares.h
 
 1633633599 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metodosauxiliares.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<string.h>
+
+1633633341 c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metodosauxiliares.h
+
+1633633341 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metodosauxiliares.c
 	<stdio.h>
 	<stdlib.h>
 	<math.h>

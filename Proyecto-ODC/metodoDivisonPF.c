@@ -3,21 +3,24 @@
 #include <string.h>
 #include "metodosAuxiliares.h"
 
-double * metodoDivisionPF(char * parteFraccionaria , short int * baseOrigen , short int * mostrarPasos){
+double * metodoDivisionPF(char * parteFraccionaria , short int * baseOrigen , short int * mostrar){
     short int* sizeFraccion;
     short int* contador;
     double* resultado;
     short int* digito;
+
     resultado = (double*) malloc( sizeof(double));
     sizeFraccion = (short int*) malloc(sizeof(short int));
     contador = (short int*) malloc(sizeof(short int));
     digito = (short int*) malloc(sizeof(short int));
+
     *sizeFraccion=0;
     *contador = 0;
     *resultado = 0.00;
     *digito = 0;
     *sizeFraccion = strlen(parteFraccionaria);
     parteFraccionaria = parteFraccionaria + *sizeFraccion - 1;
+
     while( *contador < *sizeFraccion ){
         convertirCaracter( digito , parteFraccionaria );
         if(*mostrarPasos == 1){

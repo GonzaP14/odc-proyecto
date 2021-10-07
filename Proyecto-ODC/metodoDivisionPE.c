@@ -3,7 +3,7 @@
 #include <string.h>
 #include "metodosAuxiliares.h"
 
-char * metodoDivisionPE(long int* numero , short int* baseDestino , short int* mostrarPasos ){
+char * parteEntera10aDestino (long int* numero , short int* baseDestino , short int* mostrarPasos ){
     long int* numeroAux;
     short int* sizeNumero;
     char* resultado;
