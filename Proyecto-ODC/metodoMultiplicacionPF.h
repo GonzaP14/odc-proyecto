@@ -1,6 +1,6 @@
 #ifndef METODOMULTIPLICACIONPF_H_INCLUDED
 #define METODOMULTIPLICACIONPF_H_INCLUDED
 
-char * parteFraccionariaSourceA10 (double * numero, short * baseDestino);
+char * parteFraccionaria10ADestino (double * numero, short * baseDestino, short * presicion, short * mostrar);
 
 #endif // METODOMULTIPLICACIONPF_H_INCLUDED

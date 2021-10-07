@@ -3,11 +3,10 @@
 	<stdio.h>
 	<stdlib.h>
 
-1633553931 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\convert.c
+1633630786 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\convert.c
 	<stdio.h>
 	<stdlib.h>
 	"metodoMultiplicacionPF.h"
-	"metodoDivisionPF.h"
 
 1631744505 c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\validacion.h
 
@@ -62,21 +61,21 @@
 
 1631919826 c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metododivisionpe.h
 
-1631920584 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metododivisionpe.c
+1633625305 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metododivisionpe.c
 	<stdio.h>
 	<stdlib.h>
 
-1633555794 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metodomultiplicacionpe.c
-	<stdio.h>
-	<stdlib.h>
-	<math.h>
-
-1633556881 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metodomultiplicacionpf.c
+1633625305 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metodomultiplicacionpe.c
 	<stdio.h>
 	<stdlib.h>
 	<math.h>
 
-1631750035 c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metodomultiplicacionpf.h
+1633630885 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metodomultiplicacionpf.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1633630578 c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metodomultiplicacionpf.h
 
 1633556853 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\parteentera.c
 	<stdio.h>
@@ -101,7 +100,7 @@
 
 1631751352 c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metododivisionpf.h
 
-1633553931 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metododivisonpf.c
+1633625305 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metododivisonpf.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
