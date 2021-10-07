@@ -18,14 +18,15 @@ int main () {
     char * resultado;
     resultado = parteFraccionaria10ADestino (pnumero, pBaseDestino, pPresicion, pMostrar);
 
-    printf ("El número %lf en base 10 es en base 16 igual a", *pnumero);
+    printf ("El numero %lf en base 10 es en base 16 igual a 0.", *pnumero);
 
     for (int i = 0; i < presicion; i ++) {
         printf ("%c", *resultado);
         resultado ++;
     }
-    printf (".");
+    printf (" \n");
 
+    resultado -= presicion;
     free (resultado);
 
     return 0;

@@ -3,7 +3,7 @@
 	<stdio.h>
 	<stdlib.h>
 
-1633631741 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\convert.c
+1633632900 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\convert.c
 	<stdio.h>
 	<stdlib.h>
 	"metodoMultiplicacionPF.h"
@@ -64,17 +64,18 @@
 
 1631919826 c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metododivisionpe.h
 
-1633630965 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metododivisionpe.c
+1633632406 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metododivisionpe.c
 	<stdio.h>
 	<stdlib.h>
+	<string.h>
 
-1633630965 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metodomultiplicacionpe.c
+1633632406 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metodomultiplicacionpe.c
 	<stdio.h>
 	<stdlib.h>
 	<math.h>
 	<string.h>
 
-1633631758 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metodomultiplicacionpf.c
+1633632828 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metodomultiplicacionpf.c
 	<stdio.h>
 	<stdlib.h>
 	<math.h>
@@ -104,7 +105,7 @@
 
 1631751352 c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\metododivisionpf.h
 
-1633630965 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metododivisonpf.c
+1633632406 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\metododivisonpf.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
