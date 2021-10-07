@@ -2,14 +2,6 @@
 #include <stdlib.h>
 #include <string.h>
 
-void cantidadCaracteresNumero(char * numero , short* resultado){
-    char * numeroAux = numero;
-    while ( (*numeroAux) != '\0' ){
-        *resultado = *resultado + 1;
-        numeroAux++;
-    }
-}
-
 double * metodoDivisionPF(char * parteFraccionaria , short int * baseOrigen , short int * mostrarPasos){
     short int* sizeFraccion;
     short int* contador;
@@ -26,15 +18,7 @@ double * metodoDivisionPF(char * parteFraccionaria , short int * baseOrigen , sh
     *sizeFraccion = strlen(parteFraccionaria) - 1;
     parteFraccionaria = parteFraccionaria + *sizeFraccion - 1;
     while( *contador < *sizeFraccion ){
-        if(*parteFraccionaria >= '0' && *parteFraccionaria <= '9' ){
-            *digito = *parteFraccionaria - '0';
-        }
-        else if( *parteFraccionaria >= 'A' && *parteFraccionaria <= 'F' ){
-            *digito = *parteFraccionaria - 55;
-        }
-        else if( *parteFraccionaria >= 'a' && *parteFraccionaria <= 'f' ){
-            *digito = *parteFraccionaria - 87;
-        }
+        convertirCaracter( digito , parteFraccionaria );
         *resultado += *digito;
         *resultado /= *baseOrigen;
         *contador+= 1;

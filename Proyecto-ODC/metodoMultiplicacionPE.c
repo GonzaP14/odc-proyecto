@@ -15,9 +15,6 @@ void convertirCaracter (short * digitoActual, char * numeroAux) {
     }
 }
 
-
-
-// Implementar mostrar.
 long * parteEnteraOrigenA10 (char * numero , short * baseInicio, short * mostrar){
     long * resultado;
     long * pot;
