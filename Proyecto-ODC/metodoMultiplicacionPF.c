@@ -37,7 +37,7 @@ char * parteFraccionaria10ADestino (double * numero, short * baseDestino, short 
         }
 
         if ((* mostrar == 1)) {
-            printf ("(%i) 10 = (%lf) 10, por lo que X(-%i) = (%c) \n", *baseDestino, *resultadoActual, *contador, *resultado);
+            printf ("(%i) 10 = (%lf) 10, por lo que X(-%i) = (%c) \n", *baseDestino, *resultadoActual, *contador + 1, *resultado);
         }
 
         resultado ++;
