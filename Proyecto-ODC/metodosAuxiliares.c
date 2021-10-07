@@ -18,7 +18,7 @@ void convertirCaracter (short * digitoActual, char * numeroAux) {
 void convertirLetra ( char* numero ){
     char* resultado;
     resultado = numero;
-    if(*numero >= 10 && *numero < 16){
-        *resultado = 'A' + *numero - 10;
+    if(*resultado >= 10 && *resultado < 16){
+        *resultado = 'A' + *resultado - 10;
     }
 }

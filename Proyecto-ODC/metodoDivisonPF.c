@@ -16,10 +16,16 @@ double * metodoDivisionPF(char * parteFraccionaria , short int * baseOrigen , sh
     *contador = 0;
     *resultado = 0.00;
     *digito = 0;
-    *sizeFraccion = strlen(parteFraccionaria) - 1;
+    *sizeFraccion = strlen(parteFraccionaria);
     parteFraccionaria = parteFraccionaria + *sizeFraccion - 1;
     while( *contador < *sizeFraccion ){
         convertirCaracter( digito , parteFraccionaria );
+        if(*mostrarPasos == 1){
+            printf("%hd x %hd ^ (%hd) " , *digito , *baseOrigen , *contador * (-1) - 1  );
+        }
+        if(*mostrarPasos == 1 && *contador+1 != *sizeFraccion){
+            printf(" + ");
+        }
         *resultado += *digito;
         *resultado /= *baseOrigen;
         *contador+= 1;
