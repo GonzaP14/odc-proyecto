@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include "metodosAuxiliares.h"
 
 double * metodoDivisionPF(char * parteFraccionaria , short int * baseOrigen , short int * mostrarPasos){
     short int* sizeFraccion;
@@ -11,7 +12,7 @@ double * metodoDivisionPF(char * parteFraccionaria , short int * baseOrigen , sh
     sizeFraccion = (short int*) malloc(sizeof(short int));
     contador = (short int*) malloc(sizeof(short int));
     digito = (short int*) malloc(sizeof(short int));
-    *sizeFraccion=-1;
+    *sizeFraccion=0;
     *contador = 0;
     *resultado = 0.00;
     *digito = 0;

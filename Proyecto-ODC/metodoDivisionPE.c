@@ -1,14 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-void convertirLetra ( char* numero ){
-    char* resultado;
-    resultado = numero;
-    if(*numero >= 10 && *numero < 16){
-        *resultado = 'A' + *numero - 10;
-    }
-}
+#include "metodosAuxiliares.h"
 
 char * metodoDivisionPE(long int* numero , short int* baseDestino , short int* mostrarPasos ){
     long int* numeroAux;

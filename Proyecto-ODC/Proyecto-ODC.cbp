@@ -32,7 +32,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="ParteEntera.c">
+		<Unit filename="Conversor.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="Validacion.c">
@@ -58,6 +58,12 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="metodoMultiplicacionPF.h" />
+		<Unit filename="metodosAuxiliares.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="metodosAuxiliares.h">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
