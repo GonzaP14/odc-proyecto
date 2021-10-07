@@ -10,7 +10,7 @@
 
 1631744505 c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\validacion.h
 
-1631745805 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\validacion.c
+1633642764 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\validacion.c
 	<stdio.h>
 	<stdlib.h>
 
@@ -20,7 +20,7 @@
 	<string.h>
 	<math.h>
 
-1633641871 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\convert.c
+1633641987 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\convert.c
 	<stdio.h>
 	<stdlib.h>
 	"Conversor.h"
@@ -125,7 +125,7 @@
 	"metodoDivisionPE.h"
 	"metodoDivisionPF.h"
 
-1633641596 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\conversor.c
+1633642647 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\proyecto-odc\conversor.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

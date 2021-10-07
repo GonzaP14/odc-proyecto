@@ -21,10 +21,10 @@ char * parteEntera (char * numero) {
         numPE ++;
         numero ++;
     }
-
+    *numPE='\0';
+    numPE -= *contador;
     numero -= *contador;
     free (contador);
-
     return numPE;
 }
 
@@ -47,8 +47,8 @@ char * parteFraccionaria (char * numero) {
         numPF ++;
         numero ++;
     }
-
     numero -= *contador;
+    numPF -= *contador;
     free (contador);
 
     return numPF;
@@ -92,8 +92,8 @@ char * convertir (char * numero, short * baseOrigen, short * baseDestino, short 
     numPF = parteFraccionaria (numero);
     check = verificarNumero (numPE,baseOrigen);
     check2 = verificarNumero (numPF,baseOrigen);
-
-
+    printf("%hd \n",*check);
+    printf("%hd \n",*check2);
     if (*check == 1 && *check2 == 1) {
         numPEConvertido = convertirParteEntera (numPE, baseOrigen, baseDestino, mostrar);
         numPFConvertido = convertirParteFraccionaria (numPF, baseOrigen, baseDestino, mostrar);

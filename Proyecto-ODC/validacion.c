@@ -33,14 +33,13 @@ void verificarNumeroBase11a16 (char * numero, short * baseOrigen, short * result
 short * verificarNumero (char * numero, short * baseOrigen) {
     short * resultado;
     char * numeroAux;
-
     resultado = (short *) malloc (sizeof (short));
     * resultado = 1;
     numeroAux = numero;
 
     if ((* baseOrigen) > 16) {
         * resultado = 0;
-    } else if ((* baseOrigen) < 10) {
+    } else if ((* baseOrigen) <= 10) {
         verificarNumeroBase2a10 (numeroAux, baseOrigen, resultado);
     } else {
         verificarNumeroBase11a16 (numeroAux, baseOrigen, resultado);
