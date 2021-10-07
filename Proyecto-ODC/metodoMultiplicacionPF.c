@@ -17,14 +17,14 @@ char * parteFraccionaria10ADestino (double * numero, short * baseDestino, short 
     contador = (short *) malloc (sizeof (short));
 
     * numeroAux = * numero;
-    * contador = * precision;
+    * contador = 0;
 
     while ((*contador) != (*precision)) {
         * resultadoActual = (* numeroAux) * (* baseDestino);
         * digitoActual = floor (*resultadoActual);
 
         if ((* mostrar == 1)) {
-            printf ("( %lf )10 * ( %i ) 10 = ( %lf ) 10, por lo que X(-%i) = (%digitoAcutal) \n", *numeroAux, *baseDestino, *resultadoActual, *contador, *digitoActual);
+            printf ("(%lf) 10 * ", *numeroAux);
         }
 
         * numeroAux = * resultadoActual - * digitoActual;
@@ -34,6 +34,10 @@ char * parteFraccionaria10ADestino (double * numero, short * baseDestino, short 
         }
         else {
             *resultado = 'A' + (*digitoActual - 10);
+        }
+
+        if ((* mostrar == 1)) {
+            printf ("(%i) 10 = (%lf) 10, por lo que X(-%i) = (%c) \n", *baseDestino, *resultadoActual, *contador, *resultado);
         }
 
         resultado ++;

@@ -1,11 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <Validacion.h>
 
 char * convertir (char * numero, short * baseOrigen, short * baseDestino) {
     short * check;
 
-    check = verificarNumero (numero, baseOrigen);
+    //check = verificarNumero (numero, baseOrigen);
 }
 
 char * cambiarBaseParteEntera (char * numero, short * baseSource, short * baseDestination) {
