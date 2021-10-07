@@ -117,7 +117,6 @@ char * convertir (char * numero, short * baseOrigen, short * baseDestino, short 
     if (*check == 1 && *check2 == 1) {
         numPEConvertido = convertirParteEntera (numPE, baseOrigen, baseDestino, mostrar);
         numPFConvertido = convertirParteFraccionaria (numPF, baseOrigen, baseDestino, mostrar);
-
         if (numPFConvertido == NULL) {
             resultado = numPEConvertido;
         } else {

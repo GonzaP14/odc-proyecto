@@ -32,6 +32,7 @@ char * parteEntera10aDestino (long int* numero , short int* baseDestino , short 
         resultado++;
         *sizeNumero+= 1;
     }
+    *resultado='\0';
     //Vuelvo el resultado a su posicion inicial osea a resultado[0]
     resultado -= *sizeNumero ;
     strrev(resultado);

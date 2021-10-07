@@ -43,7 +43,7 @@ char * parteFraccionaria10ADestino (double * numero, short * baseDestino, short 
         resultado ++;
         *contador = *contador + 1;
     }
-
+    *resultado = '\0';
     resultado = resultado - *contador;
 
     free (resultadoActual);
