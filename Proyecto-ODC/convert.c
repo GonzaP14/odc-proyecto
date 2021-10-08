@@ -16,15 +16,10 @@ int main () {
     short * pMostrar = &mostrar;
 
     char * resultado = convertir (pNumero, pBaseOrigen, pBaseDestino , pMostrar);
-    int contador = 0;
 
-    printf ("El número %s en base %hd es igual a ", numero, baseOrigen);
+    printf ("El numero %s en base %hd es igual a ", numero, baseOrigen);
 
-    while (*resultado != '\0') {
-        printf ("%c", *resultado);
-        resultado ++;
-        contador ++;
-    }
+    printf("%s",resultado);
 
     printf (" en base %hd. \n", baseDestino);
 

@@ -37,8 +37,12 @@ double * parteFraccionariaOrigenA10 (char * parteFraccionaria , short int * base
         *sizeFraccion-= 1;
         parteFraccionaria--;
     }
-
-    printf("\n");
+    if(*mostrar == 1 && *sizeFraccion != 0){
+        printf(" = %lf\n",*resultado);
+    }
+    else if(*mostrar == 1){
+        printf("%hd x %hd ^ (%hd) = %lf\n" , *digito , *baseOrigen , *sizeFraccion *(-1), *resultado );
+    }
 
     free(digito);
     free(sizeFraccion);

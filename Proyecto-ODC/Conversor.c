@@ -77,8 +77,10 @@ char * convertirParteEntera (char * numPE, short * baseOrigen, short * baseDesti
     long * auxiliar;
 
     if (*mostrar == 1) {
+        printf("Metodo multiplicacion parte Entera: \n");
         auxiliar = parteEnteraOrigenA10 (numPE, baseOrigen, mostrar);
         printf ("\n");
+        printf("Metodo division parte Entera: \n");
         resultado = parteEntera10aDestino (auxiliar, baseDestino, mostrar);
         printf ("\n");
     }
@@ -101,8 +103,10 @@ char * convertirParteFraccionaria (char * numPF, short * baseOrigen, short * bas
     *precision = 10;
 
     if (*mostrar == 1) {
+        printf("Metodo division parte Fraccionaria: \n");
         auxiliar = parteFraccionariaOrigenA10 (numPF, baseOrigen, mostrar);
         printf("\n");
+        printf("Metodo multiplicacion parte Fraccionaria: \n");
         resultado = parteFraccionaria10ADestino (auxiliar, baseDestino, precision, mostrar);
         printf("\n");
     }
@@ -126,21 +130,16 @@ char * convertir (char * numero, short * baseOrigen, short * baseDestino, short 
     char * numPFConvertido;
     char * resultado;
 
-    resultado = (char *) malloc (100 * sizeof (char));
-
     numPE = parteEntera (numero);
     numPF = parteFraccionaria (numero);
     checkPE = verificarNumero (numPE,baseOrigen);
     checkPF = verificarNumero (numPF,baseOrigen);
 
-    if (*checkPE == 1 && *checkPF == 1) {
+    if (*checkPE == 1 && *checkPF == 1 && strlen(numPE) <= 10 && strlen(numPF) <= 5) {
         numPEConvertido = convertirParteEntera (numPE, baseOrigen, baseDestino, mostrar);
         numPFConvertido = convertirParteFraccionaria (numPF, baseOrigen, baseDestino, mostrar);
 
-        printf ("PE: %c \n", *numPEConvertido);
-        printf ("PF: %c \n", *numPFConvertido);
-
-        if (strlen (numPFConvertido) == 0) {
+        if (atoi(numPFConvertido) == 0) {
             resultado = numPEConvertido;
         }
         else {
@@ -156,7 +155,6 @@ char * convertir (char * numero, short * baseOrigen, short * baseDestino, short 
     free (checkPF);
     free (numPE);
     free (numPF);
-    free (numPEConvertido);
     free (numPFConvertido);
 
     return resultado;

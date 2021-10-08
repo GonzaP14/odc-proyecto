@@ -41,7 +41,13 @@ char * parteEntera10aDestino (long long * numero , short * baseDestino , short *
         resultado ++;
         *sizeNumero += 1;
     }
-
+    if( *sizeNumero == 0 && *mostrar == 1 ){
+        *resultado = '0';
+        printf("X%hd = %I64d mod %hd ", *sizeNumero , *numeroAux , *baseDestino);
+        resultado++;
+        *sizeNumero+=1;
+        printf ("= %I64d \n" , *numeroAux );
+    }
     *resultado = '\0';
     resultado -= *sizeNumero ;
     strrev (resultado);

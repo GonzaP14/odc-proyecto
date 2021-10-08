@@ -45,7 +45,6 @@ char * parteFraccionaria10ADestino (double * numero, short * baseDestino, short 
 
     *resultado = '\0';
     resultado = resultado - *contador;
-
     free (resultadoActual);
     free (digitoActual);
     free (contador);

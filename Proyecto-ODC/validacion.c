@@ -16,18 +16,22 @@ void verificarNumeroBase2a10 (char * numero, short * baseOrigen, short * resulta
 void verificarNumeroBase11a16 (char * numero, short * baseOrigen, short * resultado) {
     short * checkNumeros;
     short * checkLetras;
+    checkLetras = (short *)malloc(sizeof(short));
+    checkNumeros = (short *)malloc(sizeof(short));
 
     while ((*numero) != '\0') {
-        checkNumeros = ( (*numero) >= '0' && (*numero) < ('0' + *baseOrigen) );
-        checkLetras = ( (* numero) >= 'A' && (*numero) < ('A' + *baseOrigen - 10) ) || ( (* numero) >= 'a' && (*numero) < ('a' + *baseOrigen - 10) );
+        *checkNumeros = ( (*numero) >= '0' && (*numero) < ('0' + *baseOrigen) );
+        *checkLetras = ( (* numero) >= 'A' && (*numero) < ('A' + *baseOrigen - 10) ) || ( (* numero) >= 'a' && (*numero) < ('a' + *baseOrigen - 10) );
 
-        if (!(checkNumeros || checkLetras)) {
+        if (!(*checkNumeros || *checkLetras)) {
             * resultado = 0;
             break;
         }
 
         numero ++;
     }
+    free(checkLetras);
+    free(checkNumeros);
 }
 
 short * verificarNumero (char * numero, short * baseOrigen) {
@@ -37,7 +41,7 @@ short * verificarNumero (char * numero, short * baseOrigen) {
     * resultado = 1;
     numeroAux = numero;
 
-    if ((* baseOrigen) > 16) {
+    if ((* baseOrigen) > 16 ) {
         * resultado = 0;
     } else if ((* baseOrigen) <= 10) {
         verificarNumeroBase2a10 (numeroAux, baseOrigen, resultado);

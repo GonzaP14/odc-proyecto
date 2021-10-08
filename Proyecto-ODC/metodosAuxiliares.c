@@ -23,3 +23,4 @@ void convertirLetra (char * numero ){
         *resultado = 'A' + *resultado - 10;
     }
 }
+
