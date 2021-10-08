@@ -6,17 +6,13 @@
 char * parteEntera10aDestino (long long * numero , short * baseDestino , short * mostrar){
     long long * numeroAux;
     short * sizeNumero;
-    short * capacidad;
     char* resultado;
-    //char* auxiliar;
 
     sizeNumero = (short *) malloc (sizeof(short));
-    capacidad = (short *) malloc (sizeof(short));
     resultado = (char*) malloc (45 * sizeof(char));
 
     numeroAux = numero;
     *sizeNumero = 0;
-    *capacidad = 40;
 
     while (*numeroAux > 0){
         if (*mostrar == 1){
@@ -42,14 +38,6 @@ char * parteEntera10aDestino (long long * numero , short * baseDestino , short *
             printf ("= %I64d \n" , *numeroAux );
         }
 
-        /* En progreso: Reacomodar o Alternativa 45 * sizeOf (char)
-        if (*sizeNumero == *capacidad) {
-            auxiliar = realloc (resultado, 2 * sizeof (numero));
-            *capacidad = *capacidad * 2;
-            resultado = auxiliar;
-        }
-        */
-
         resultado ++;
         *sizeNumero += 1;
     }
@@ -59,7 +47,6 @@ char * parteEntera10aDestino (long long * numero , short * baseDestino , short *
     strrev (resultado);
 
     free (sizeNumero);
-    free (capacidad);
 
     return resultado;
 }

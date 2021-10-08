@@ -137,6 +137,9 @@ char * convertir (char * numero, short * baseOrigen, short * baseDestino, short 
         numPEConvertido = convertirParteEntera (numPE, baseOrigen, baseDestino, mostrar);
         numPFConvertido = convertirParteFraccionaria (numPF, baseOrigen, baseDestino, mostrar);
 
+        printf ("PE: %c \n", *numPEConvertido);
+        printf ("PF: %c \n", *numPFConvertido);
+
         if (strlen (numPFConvertido) == 0) {
             resultado = numPEConvertido;
         }

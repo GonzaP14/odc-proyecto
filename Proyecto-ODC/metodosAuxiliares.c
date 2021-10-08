@@ -23,20 +23,3 @@ void convertirLetra (char * numero ){
         *resultado = 'A' + *resultado - 10;
     }
 }
-
-void reacomodar (char * numero, short * capacidad) {
-    char * auxiliar;
-
-    * capacidad = *capacidad * 2;
-
-    printf ("hola\n");
-    auxiliar = realloc (numero, 2 * sizeof (numero));
-    printf ("hola\n");
-
-    if (auxiliar != NULL) {
-        numero = auxiliar;
-    }
-    else {
-       printf ("ERROR: No hay memoria dinámica disponible");
-    }
-}
