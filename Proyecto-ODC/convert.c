@@ -1,27 +1,86 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "Conversor.h"
 
-int main () {
-    char numero [17] = "FFFFFFFFFF.FFFFF";
-    char * pNumero = &numero[0];
+int main (int argc, char ** argv) {
+    char * numero;
+    char * resultado;
+    short * baseOrigen;
+    short * baseDestino;
+    short * verbose;
+    short * help;
+    short * contador;
 
-    short baseOrigen = 16;
-    short * pBaseOrigen = &baseOrigen;
+    baseOrigen = (short *) malloc (sizeof (short));
+    baseDestino = (short *) malloc (sizeof (short));
+    verbose = (short *) malloc (sizeof (short));
+    help = (short *) malloc (sizeof (short));
+    contador = (short *) malloc (sizeof (short));
 
-    short baseDestino = 2;
-    short * pBaseDestino = &baseDestino;
+    *baseOrigen = 0;
+    *baseDestino = 0;
+    *verbose = 0;
+    *help = 0;
 
-    short mostrar = 1;
-    short * pMostrar = &mostrar;
+    if (argc <= 9) {
 
-    char * resultado = convertir (pNumero, pBaseOrigen, pBaseDestino , pMostrar);
+        while (*contador < argc) {
+            if (strcmp (argv [*contador], "-n")) {
+                numero = argv [*contador + 1];
+            }
 
-    printf ("El numero %s en base %hd es igual a ", numero, baseOrigen);
+            if (strcmp (argv [*contador], "-s")) {
+                *baseOrigen = atoi (argv [*contador + 1]);
+            }
 
-    printf("%s",resultado);
+            if (strcmp (argv [*contador], "-d")) {
+                *baseDestino = atoi (argv [*contador + 1]);
+            }
 
-    printf (" en base %hd. \n", baseDestino);
+            if (strcmp (argv [*contador], "-v")) {
+                *verbose = 1;
+            }
+
+            if (strcmp (argv [*contador], "-h")) {
+                *help = 1;
+            }
+
+            *contador += 1;
+        }
+
+        if (*baseOrigen == 0) {
+            *baseOrigen = 10;
+        }
+
+        if (*baseDestino == 0) {
+            *baseDestino = 10;
+        }
+
+        resultado = convertir (numero, baseOrigen, baseDestino, verbose);
+
+        printf ("El numero %s en base %hd es igual a %s en base %hd.", numero, *baseOrigen, resultado, *baseDestino);
+    }
+
+    else if (argc > 9) {
+        printf ("Error: La cantidad de argumentos ingresada. ");
+    }
+    else {
+        printf ("Se necesita que ingrese un argumento.");
+    }
+
+    free (resultado);
+    free (baseOrigen);
+    free (baseDestino);
+    free (verbose);
+    free (help);
+
+    while (*contador > 0) {
+        *contador -= 1;
+        free (argv [*contador]);
+    }
+
+    free (argv);
 
     return EXIT_SUCCESS;
 }
