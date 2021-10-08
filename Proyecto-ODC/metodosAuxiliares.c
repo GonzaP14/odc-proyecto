@@ -1,7 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
-#include <string.h>
 
 void convertirCaracter (short * digitoActual, char * numeroAux) {
     if (*numeroAux >= '0' && *numeroAux <= '9'){
@@ -15,9 +13,11 @@ void convertirCaracter (short * digitoActual, char * numeroAux) {
     }
 }
 
-void convertirLetra ( char* numero ){
+void convertirLetra (char * numero ){
     char* resultado;
+
     resultado = numero;
+
     if(*resultado >= 10 && *resultado < 16){
         *resultado = 'A' + *resultado - 10;
     }

@@ -3,40 +3,52 @@
 #include <string.h>
 #include "metodosAuxiliares.h"
 
-char * parteEntera10aDestino (long int* numero , short int* baseDestino , short int* mostrarPasos ){
-    long int* numeroAux;
-    short int* sizeNumero;
+char * parteEntera10aDestino (long * numero , short * baseDestino , short * mostrar){
+    long * numeroAux;
+    short * sizeNumero;
     char* resultado;
-    sizeNumero = (short int*) malloc(sizeof(short int));
-    resultado = (char*) malloc(sizeof(char));
+
+    sizeNumero = (short *) malloc (sizeof(short));
+    resultado = (char*) malloc (2 * sizeof(char));
+
     numeroAux = numero;
     *sizeNumero = 0;
-    while( *numeroAux > 0 ){
-        if( *mostrarPasos == 1){
+
+    while (*numeroAux > 0){
+
+        if (*mostrar == 1){
             printf("X%hd = %ld mod %hd", *sizeNumero , *numeroAux , *baseDestino);
         }
-        *resultado = *numeroAux % *baseDestino;
-        if( *resultado >= 10 && *baseDestino > 10){
+
+        *resultado = (*numeroAux % *baseDestino);
+
+        if (*resultado >= 10 && *baseDestino > 10){
             convertirLetra(resultado);
         }
         else{
             *resultado = *resultado + '0';
         }
-        if( *mostrarPasos == 1 ){
-            printf(" = %c y Q%hd = (%ld - %c) / %hd ", *resultado , *sizeNumero , *numeroAux , *resultado , *baseDestino );
+
+        if (*mostrar == 1){
+            printf (" = %c y Q%hd = (%ld - %c) / %hd ", *resultado , *sizeNumero , *numeroAux , *resultado , *baseDestino);
         }
+
         *numeroAux /= *baseDestino;
-        if( *mostrarPasos == 1 ){
-            printf("= %ld \n" , *numeroAux );
+
+        if (*mostrar == 1){
+            printf ("= %ld \n" , *numeroAux );
         }
-        resultado++;
-        *sizeNumero+= 1;
+
+        resultado ++;
+        *sizeNumero += 1;
     }
-    *resultado='\0';
-    //Vuelvo el resultado a su posicion inicial osea a resultado[0]
+
+    *resultado = '\0';
     resultado -= *sizeNumero ;
-    strrev(resultado);
-    free(sizeNumero);
+    strrev (resultado);
+
+    free (sizeNumero);
+
     return resultado;
 }
 

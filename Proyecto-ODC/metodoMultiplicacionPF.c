@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <math.h>
 
-// Implementar mostrar.
 char * parteFraccionaria10ADestino (double * numero, short * baseDestino, short * precision, short * mostrar) {
     char * resultado;
     double * numeroAux;
@@ -37,12 +36,13 @@ char * parteFraccionaria10ADestino (double * numero, short * baseDestino, short 
         }
 
         if ((* mostrar == 1)) {
-            printf ("(%i) 10 = (%lf) 10, por lo que X(%i) = (%c) \n", *baseDestino, *resultadoActual, - (*contador + 1), *resultado);
+            printf ("(%i) 10 = (%lf) 10, por lo que X(%i) = Piso (%lf) = (%c) \n", *baseDestino, *resultadoActual, - (*contador + 1), *resultadoActual , *resultado);
         }
 
         resultado ++;
         *contador = *contador + 1;
     }
+
     *resultado = '\0';
     resultado = resultado - *contador;
 

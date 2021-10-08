@@ -3,7 +3,7 @@
 #include "Conversor.h"
 
 int main () {
-    char numero [7] = "F0.123";
+    char numero [7] = "0.123";
     char * pNumero = &numero[0];
 
     short baseOrigen = 16;

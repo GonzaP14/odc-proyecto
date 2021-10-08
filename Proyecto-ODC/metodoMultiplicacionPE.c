@@ -4,9 +4,9 @@
 #include <string.h>
 #include "metodosAuxiliares.h"
 
-long * parteEnteraOrigenA10 (char * numero , short * baseInicio, short * mostrar){
-    long * resultado;
-    long * pot;
+long long * parteEnteraOrigenA10 (char * numero , short * baseInicio, short * mostrar){
+    long long * resultado;
+    long long * pot;
     char * numeroAux;
     short * digitoActual;
     short * cantidadCaracteres;
@@ -14,8 +14,8 @@ long * parteEnteraOrigenA10 (char * numero , short * baseInicio, short * mostrar
 
     digitoActual = (short *) malloc (sizeof(short));
     cantidadCaracteres = (short *) malloc (sizeof(short));
-    resultado = (long *) malloc (sizeof(long));
-    pot = (long *) malloc (sizeof(long));
+    resultado = (long long *) malloc (sizeof(long long));
+    pot = (long long *) malloc (sizeof(long long));
     cantidadDigitos = (short *) malloc (sizeof (short));
     numeroAux = numero;
 
@@ -28,15 +28,18 @@ long * parteEnteraOrigenA10 (char * numero , short * baseInicio, short * mostrar
 
     while (*cantidadCaracteres >= 0) {
 
-        if(*mostrar == 1){
-           printf("%ld + %c x %hd^%hd " , *resultado , *numeroAux , *baseInicio , *cantidadCaracteres );
+        if (*mostrar == 1){
+           printf("%I64i + %c x %hi^%hi " , *resultado , *numeroAux , *baseInicio , *cantidadCaracteres );
         }
+
         convertirCaracter (digitoActual, numeroAux);
         * pot = (pow (* baseInicio, * cantidadCaracteres));
         * resultado = * resultado + ((* digitoActual) * (* pot));
-        if(*mostrar == 1){
-            printf("= %ld \n" , *resultado );
+
+        if (*mostrar == 1){
+            printf("= %I64i \n" , *resultado );
         }
+
         * cantidadCaracteres = * cantidadCaracteres - 1;
         numeroAux ++;
     }

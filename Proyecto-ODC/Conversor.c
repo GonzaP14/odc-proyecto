@@ -11,8 +11,9 @@ char * parteEntera (char * numero) {
     char * numPE;
     short * contador;
 
-    numPE = (char *) malloc (10 * sizeof (char));
+    numPE = (char *) malloc (11 * sizeof (char));
     contador = (short *) malloc (sizeof (contador));
+
     *contador = 0;
 
     while (*numero != '.' && *numero != '\0') {
@@ -21,10 +22,13 @@ char * parteEntera (char * numero) {
         numPE ++;
         numero ++;
     }
-    *numPE='\0';
+
+    *numPE = '\0';
     numPE -= *contador;
     numero -= *contador;
+
     free (contador);
+
     return numPE;
 }
 
@@ -33,31 +37,38 @@ char * parteFraccionaria (char * numero) {
     short * contador;
     short * contadorNumPF;
 
-    numPF = (char *) malloc (5 * sizeof (char));
+    numPF = (char *) malloc (6 * sizeof (char));
     contador = (short *) malloc (sizeof (short));
     contadorNumPF = (short *) malloc (sizeof (short));
 
-    *contadorNumPF=0;
     *contador = 0;
+    *contadorNumPF = 0;
 
-    while (*numero != '.') {
+    while (*numero != '.' && *numero != '\0') {
         numero ++;
         *contador = *contador + 1;
     }
-    numero++;
-    *contador = *contador + 1;
-    while (*numero != '\0') {
-        *numPF = *numero;
-        *contadorNumPF = *contadorNumPF + 1;
-        *contador = *contador + 1;
-        numPF ++;
+
+    if (*numero == '.') {
         numero ++;
+        *contador = *contador + 1;
+
+        while (*numero != '\0') {
+            *numPF = *numero;
+            *contadorNumPF = *contadorNumPF + 1;
+            *contador = *contador + 1;
+            numPF ++;
+            numero ++;
+        }
     }
-    *numPF='\0';
+
+    *numPF = '\0';
     numero -= *contador;
     numPF -= *contadorNumPF;
+
     free (contador);
-    free(contadorNumPF);
+    free (contadorNumPF);
+
     return numPF;
 }
 
@@ -65,16 +76,18 @@ char * convertirParteEntera (char * numPE, short * baseOrigen, short * baseDesti
     char * resultado;
     long * auxiliar;
 
-    auxiliar = parteEnteraOrigenA10 (numPE, baseOrigen, mostrar);
-    if(*mostrar == 1){
-        printf("\n");
+    if (*mostrar == 1) {
+        auxiliar = parteEnteraOrigenA10 (numPE, baseOrigen, mostrar);
+        resultado = parteEntera10aDestino (auxiliar, baseDestino, mostrar);
+        printf ("\n");
     }
-    resultado = parteEntera10aDestino (auxiliar, baseDestino, mostrar);
-    if(*mostrar == 1){
-        printf("\n");
+    else {
+        auxiliar = parteEnteraOrigenA10 (numPE, baseOrigen, mostrar);
+        resultado = parteEntera10aDestino (auxiliar, baseDestino, mostrar);
     }
 
     free(auxiliar);
+
     return resultado;
 }
 
@@ -84,24 +97,28 @@ char * convertirParteFraccionaria (char * numPF, short * baseOrigen, short * bas
     double * auxiliar;
 
     precision = (short*) malloc(sizeof(short));
-
     *precision = 10;
-    auxiliar = parteFraccionariaOrigenA10 (numPF, baseOrigen, mostrar);
-    if(*mostrar == 1){
+
+    if (*mostrar == 1) {
+        auxiliar = parteFraccionariaOrigenA10 (numPF, baseOrigen, mostrar);
+        printf("\n");
+        resultado = parteFraccionaria10ADestino (auxiliar, baseDestino, precision, mostrar);
         printf("\n");
     }
-    resultado = parteFraccionaria10ADestino (auxiliar, baseDestino, precision, mostrar);
-    if(*mostrar == 1){
-        printf("\n");
+    else {
+        auxiliar = parteFraccionariaOrigenA10 (numPF, baseOrigen, mostrar);
+        resultado = parteFraccionaria10ADestino (auxiliar, baseDestino, precision, mostrar);
     }
+
     free(auxiliar);
     free(precision);
+
     return resultado;
 }
 
 char * convertir (char * numero, short * baseOrigen, short * baseDestino, short * mostrar) {
-    short * check;
-    short * check2;
+    short * checkPE;
+    short * checkPF;
     char * numPE;
     char * numPF;
     char * numPEConvertido;
@@ -112,23 +129,31 @@ char * convertir (char * numero, short * baseOrigen, short * baseDestino, short 
 
     numPE = parteEntera (numero);
     numPF = parteFraccionaria (numero);
-    check = verificarNumero (numPE,baseOrigen);
-    check2 = verificarNumero (numPF,baseOrigen);
-    if (*check == 1 && *check2 == 1) {
+    checkPE = verificarNumero (numPE,baseOrigen);
+    checkPF = verificarNumero (numPF,baseOrigen);
+
+    if (*checkPE == 1 && *checkPF == 1) {
         numPEConvertido = convertirParteEntera (numPE, baseOrigen, baseDestino, mostrar);
         numPFConvertido = convertirParteFraccionaria (numPF, baseOrigen, baseDestino, mostrar);
-        if (numPFConvertido == NULL) {
+
+        if (strlen (numPFConvertido) == 0) {
             resultado = numPEConvertido;
-        } else {
+        }
+        else {
             resultado = strcat (strcat (numPEConvertido, "."), numPFConvertido);
         }
 
     } else {
-        printf ("El número no verifica las condiciones de su base origen: %i.", *baseOrigen);
+        printf ("El numero no verifica las condiciones de su base origen: %i.", *baseOrigen);
         exit (EXIT_FAILURE);
     }
-    free(check);
+
+    free (checkPE);
+    free (checkPF);
+    free (numPE);
+    free (numPF);
+    free (numPEConvertido);
+    free (numPFConvertido);
+
     return resultado;
 }
-
-
