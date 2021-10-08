@@ -22,27 +22,34 @@ int main (int argc, char ** argv) {
     *baseDestino = 0;
     *verbose = 0;
     *help = 0;
+    *contador = 0;
 
     if (argc <= 9) {
-
+        printf("hola");
         while (*contador < argc) {
+            printf("entre al while");
             if (strcmp (argv [*contador], "-n")) {
+                printf("encontre el numero");
                 numero = argv [*contador + 1];
             }
 
             if (strcmp (argv [*contador], "-s")) {
+                printf("encontre origen");
                 *baseOrigen = atoi (argv [*contador + 1]);
             }
 
             if (strcmp (argv [*contador], "-d")) {
+                printf("encontre destino");
                 *baseDestino = atoi (argv [*contador + 1]);
             }
 
             if (strcmp (argv [*contador], "-v")) {
+                printf("encontre verbose");
                 *verbose = 1;
             }
 
             if (strcmp (argv [*contador], "-h")) {
+                printf("encontre help");
                 *help = 1;
             }
 
