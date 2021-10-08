@@ -54,11 +54,11 @@ char * parteFraccionaria (char * numero) {
         *contador = *contador + 1;
 
         while (*numero != '\0') {
-            *numPF = *numero;
-            *contadorNumPF = *contadorNumPF + 1;
-            *contador = *contador + 1;
-            numPF ++;
-            numero ++;
+        *numPF = *numero;
+        *contadorNumPF += 1;
+        *contador += 1;
+        numPF ++;
+        numero ++;
         }
     }
 
@@ -78,6 +78,7 @@ char * convertirParteEntera (char * numPE, short * baseOrigen, short * baseDesti
 
     if (*mostrar == 1) {
         auxiliar = parteEnteraOrigenA10 (numPE, baseOrigen, mostrar);
+        printf ("\n");
         resultado = parteEntera10aDestino (auxiliar, baseDestino, mostrar);
         printf ("\n");
     }
