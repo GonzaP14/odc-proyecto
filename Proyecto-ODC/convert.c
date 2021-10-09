@@ -29,30 +29,25 @@ int main (int argc, char ** argv) {
 
     if (argc <= 9) {
         while (*contador <= argc ) {
-            if (strcmp (argv [*contador], "-n" ) == 0 && *numeroAsignado == 0) {
+            if (*numeroAsignado == 0 && strcmp (argv [*contador], "-n" ) == 0 ) {
                 *numeroAsignado = 1;
                 numero = argv [*contador + 1];
-                printf("%s\n",numero);
             }
 
-            if (strcmp (argv [*contador], "-s") == 0 && *baseOrigen == 0) {
+            if (*baseOrigen == 0 && strcmp (argv [*contador], "-s") == 0) {
                 *baseOrigen = atoi (argv [*contador + 1]);
-                printf("%hd\n",*baseOrigen);
             }
 
-            if (strcmp (argv [*contador], "-d") == 0 && *baseDestino == 0) {
+            if (*baseDestino == 0 && strcmp (argv [*contador], "-d") == 0 ) {
                 *baseDestino = atoi (argv [*contador + 1]);
-                printf("%hd\n",*baseDestino);
             }
 
-            if (strcmp (argv [*contador], "-v") == 0 && *verbose == 0) {
+            if (*verbose == 0 && strcmp (argv [*contador], "-v") == 0 ) {
                 *verbose = 1;
-                printf("%hd\n",*verbose);
             }
 
-            if (strcmp (argv [*contador], "-h") == 0 && *help == 0) {
+            if (*help == 0 && strcmp (argv [*contador], "-h") == 0 ) {
                 *help = 1;
-                printf("%hd\n",*help);
             }
             *contador += 1;
         }
@@ -63,7 +58,6 @@ int main (int argc, char ** argv) {
         if (*baseDestino == 0) {
             *baseDestino = 10;
         }
-        printf(".%s.",numero);
 
         resultado = convertir (numero, baseOrigen, baseDestino, verbose);
 
