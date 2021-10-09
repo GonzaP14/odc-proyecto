@@ -4,7 +4,7 @@
 #include <string.h>
 #include "metodosAuxiliares.h"
 
-long long * parteEnteraOrigenA10 (char * numero , short * baseInicio, short * mostrar){
+long long * parteEnteraOrigenA10 (char * numero , short * baseOrigen, short * mostrar){
     long long * resultado;
     long long * pot;
     char * numeroAux;
@@ -29,11 +29,11 @@ long long * parteEnteraOrigenA10 (char * numero , short * baseInicio, short * mo
     while (*cantidadCaracteres >= 0) {
 
         if (*mostrar == 1){
-           printf("%I64i + %c x %hi^%hi " , *resultado , *numeroAux , *baseInicio , *cantidadCaracteres );
+           printf("%I64i + %c x %hi^%hi " , *resultado , *numeroAux , *baseOrigen , *cantidadCaracteres );
         }
 
         convertirCaracter (digitoActual, numeroAux);
-        * pot = (pow (* baseInicio, * cantidadCaracteres));
+        * pot = (pow (* baseOrigen, * cantidadCaracteres));
         * resultado = * resultado + ((* digitoActual) * (* pot));
 
         if (*mostrar == 1){

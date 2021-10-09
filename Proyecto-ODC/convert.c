@@ -50,6 +50,7 @@ void mostrarEntrada (char * numero , short* baseOrigen , short* baseDestino , sh
 
 void mostrarHelp(){
     printf("MENU DE AYUDA:\nEl programa recibe las siguientes entradas. No importa el orden.\n");
+
     printf("-n	Indica que la siguiente entrada es el numero a convertir. Es obligatorio.<number> Es el numero que le sigue a -n.\n");
     printf("Asegurese de lo siguiente:\n");
     printf("* Que el numero sea valido en su base de origen.\n");
