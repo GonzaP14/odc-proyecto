@@ -11,51 +11,51 @@ int main (int argc, char ** argv) {
     short * verbose;
     short * help;
     short * contador;
+    short * numeroAsignado;
 
+    numeroAsignado = (short *) malloc (sizeof (short));
     baseOrigen = (short *) malloc (sizeof (short));
     baseDestino = (short *) malloc (sizeof (short));
     verbose = (short *) malloc (sizeof (short));
     help = (short *) malloc (sizeof (short));
     contador = (short *) malloc (sizeof (short));
 
+    *numeroAsignado = 0;
     *baseOrigen = 0;
     *baseDestino = 0;
     *verbose = 0;
     *help = 0;
-    *contador = 0;
+    *contador = 1;
 
     if (argc <= 9) {
-        printf("hola");
-        while (*contador < argc) {
-            printf("entre al while");
-            if (strcmp (argv [*contador], "-n")) {
-                printf("encontre el numero");
+        while (*contador <= argc ) {
+            if (strcmp (argv [*contador], "-n" ) == 0 && *numeroAsignado == 0) {
+                *numeroAsignado = 1;
                 numero = argv [*contador + 1];
+                printf("%s\n",numero);
             }
 
-            if (strcmp (argv [*contador], "-s")) {
-                printf("encontre origen");
+            if (strcmp (argv [*contador], "-s") == 0 && *baseOrigen == 0) {
                 *baseOrigen = atoi (argv [*contador + 1]);
+                printf("%hd\n",*baseOrigen);
             }
 
-            if (strcmp (argv [*contador], "-d")) {
-                printf("encontre destino");
+            if (strcmp (argv [*contador], "-d") == 0 && *baseDestino == 0) {
                 *baseDestino = atoi (argv [*contador + 1]);
+                printf("%hd\n",*baseDestino);
             }
 
-            if (strcmp (argv [*contador], "-v")) {
-                printf("encontre verbose");
+            if (strcmp (argv [*contador], "-v") == 0 && *verbose == 0) {
                 *verbose = 1;
+                printf("%hd\n",*verbose);
             }
 
-            if (strcmp (argv [*contador], "-h")) {
-                printf("encontre help");
+            if (strcmp (argv [*contador], "-h") == 0 && *help == 0) {
                 *help = 1;
+                printf("%hd\n",*help);
             }
-
             *contador += 1;
         }
-
         if (*baseOrigen == 0) {
             *baseOrigen = 10;
         }
@@ -63,6 +63,7 @@ int main (int argc, char ** argv) {
         if (*baseDestino == 0) {
             *baseDestino = 10;
         }
+        printf(".%s.",numero);
 
         resultado = convertir (numero, baseOrigen, baseDestino, verbose);
 
@@ -81,6 +82,7 @@ int main (int argc, char ** argv) {
     free (baseDestino);
     free (verbose);
     free (help);
+    free(numeroAsignado);
 
     while (*contador > 0) {
         *contador -= 1;
