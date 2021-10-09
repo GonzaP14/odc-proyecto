@@ -74,7 +74,7 @@ char * parteFraccionaria (char * numero) {
 
 char * convertirParteEntera (char * numPE, short * baseOrigen, short * baseDestino, short * mostrar) {
     char * resultado;
-    long * auxiliar;
+    long long* auxiliar;
 
     if (*mostrar == 1) {
         printf("Metodo multiplicacion parte Entera: \n");
