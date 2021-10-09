@@ -3,9 +3,10 @@
 	<stdio.h>
 	<stdlib.h>
 
-1633720400 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\convert.c
+1633803924 source:c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\convert.c
 	<stdio.h>
 	<stdlib.h>
+	<string.h>
 	"Conversor.h"
 
 1633707179 c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\validacion.h
