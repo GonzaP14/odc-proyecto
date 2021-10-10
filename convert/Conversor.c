@@ -132,14 +132,18 @@ char * convertir (char * numero, short * baseOrigen, short * baseDestino, short 
 
     numPE = parteEntera (numero);
     numPF = parteFraccionaria (numero);
+    numPEConvertido = NULL;
+    numPFConvertido = NULL;
     checkPE = verificarNumero (numPE,baseOrigen);
     checkPF = verificarNumero (numPF,baseOrigen);
 
     if (*checkPE == 1 && *checkPF == 1 && strlen(numPE) <= 10 && strlen(numPF) <= 5) {
         numPEConvertido = convertirParteEntera (numPE, baseOrigen, baseDestino, mostrar);
-        numPFConvertido = convertirParteFraccionaria (numPF, baseOrigen, baseDestino, mostrar);
+        if (strlen (numPF) != 0) {
+            numPFConvertido = convertirParteFraccionaria (numPF, baseOrigen, baseDestino, mostrar);
+        }
 
-        if (atoi(numPFConvertido) == 0) {
+        if (numPFConvertido == NULL || atoi(numPFConvertido) == 0) {
             resultado = numPEConvertido;
         }
         else {
