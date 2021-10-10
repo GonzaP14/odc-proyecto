@@ -9,7 +9,7 @@
 */
 
 /**
-Convierte la parte entera del numero a la base 10.
+Convierte la parte entera del numero de la base origen a la base 10.
 
 @param numero: Numero a convertir.
 @param baseOrigen: Base origen del numero.

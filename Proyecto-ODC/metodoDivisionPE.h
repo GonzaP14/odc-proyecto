@@ -1,13 +1,15 @@
 #ifndef METODODIVISION_H_INCLUDED
 #define METODODIVISION_H_INCLUDED
 /**
-@file Validacion.h
+@file metodoDivision.h
 @version 1.0
 @date 09/10/2021
 @author: Gonzalo Martin Perez y Nicolas Messina.
 */
+
 /**
-Metodo utilizado para convertir la parte entera de la base 10 a la base destino
+Convierte la parte entera del numero de la base 10 a la base destino.
+
 @param: numero Numero al cual vamos a convertir de base 10 a base Destino
 @param: baseDestino Base a la que queremos llevar el numero
 @param: mostrar Es utilizado para saber si debemos hacer el verbose o no en el metodo
