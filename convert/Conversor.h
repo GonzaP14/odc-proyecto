@@ -47,7 +47,7 @@ Realiza la conversion de la parte fraccionaria del numero.
 char * convertirParteFraccionaria (char * numPF, short * baseOrigen, short * baseDestino, short * mostrar);
 
 /**
-Realiza la conversion del numero a la base destino
+Realiza la conversion del numero a la base destino.
 
 @param numero: Numero a convertir
 @param baseOrigen: Base de la cual partimos para hacer la conversion.

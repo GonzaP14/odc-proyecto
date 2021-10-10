@@ -77,10 +77,10 @@ char * convertirParteEntera (char * numPE, short * baseOrigen, short * baseDesti
     long long* auxiliar;
 
     if (*mostrar == 1) {
-        printf("Metodo multiplicacion parte Entera: \n");
+        printf("Metodo multiplicacion: Parte Entera \n");
         auxiliar = parteEnteraOrigenA10 (numPE, baseOrigen, mostrar);
         printf ("\n");
-        printf("Metodo division parte Entera: \n");
+        printf("Metodo division: Parte Entera \n");
         resultado = parteEntera10aDestino (auxiliar, baseDestino, mostrar);
         printf ("\n");
     }
@@ -103,10 +103,10 @@ char * convertirParteFraccionaria (char * numPF, short * baseOrigen, short * bas
     *precision = 10;
 
     if (*mostrar == 1) {
-        printf("Metodo division parte Fraccionaria: \n");
+        printf("Metodo division: Parte Fraccionaria \n");
         auxiliar = parteFraccionariaOrigenA10 (numPF, baseOrigen, mostrar);
         printf("\n");
-        printf("Metodo multiplicacion parte Fraccionaria: \n");
+        printf("Metodo multiplicacion: Parte Fraccionaria \n");
         resultado = parteFraccionaria10ADestino (auxiliar, baseDestino, precision, mostrar);
         printf("\n");
     }
