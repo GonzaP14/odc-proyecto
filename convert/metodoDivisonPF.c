@@ -42,7 +42,7 @@ double * parteFraccionariaOrigenA10 (char * numero, short * baseOrigen , short *
     }
 
     if (*mostrar == 1 && *sizeFraccion != 0){
-        printf(" = (%lf) 10 \n",*resultado);
+        printf (" = (%lf) 10 \n", *resultado);
     }
     else if (*mostrar == 1){
         printf("%hd x %hd ^ (%hd) = (%lf) 10 \n" , *digito, *baseOrigen, *sizeFraccion *(-1), *resultado);
