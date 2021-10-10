@@ -60,29 +60,29 @@ void mostrarHelp(){
     printf("MENU DE AYUDA:\n\n");
     printf ("El programa recibe las siguientes entradas. (No importa su orden) \n\n");
 
-    printf("-n      Indica que la siguiente entrada es el numero a convertir. Es obligatorio.<number> Es el numero que le sigue a -n.\n");
-    printf("        Asegurese de lo siguiente: \n");
+    printf("-n      Indica que la siguiente entrada es el numero a convertir. <number> es el numero que le sigue a -n. \n");
+    printf("        Asegurese de lo siguient sobre <number>: \n");
     printf("        * Que el numero sea valido en su base de origen.\n");
-    printf("        * Que la parte entera no posea más de 10 dígitos.\n");
-    printf("        * Que la parte fraccionaria no posea más de 6 dígitos.\n");
-    printf("        Es obligatorio para el correcto funcionamiento.\n\n");
+    printf("        * Que la parte entera no posea mas de 10 digitos.\n");
+    printf("        * Que la parte fraccionaria no posea mas de 6 digitos.\n");
+    printf("        Es obligatorio para el correcto funcionamiento. \n\n");
 
-    printf("-s      Indica que la siguiente entrada es la base origen del numero ingresado.\n");
-    printf("        Las bases validas se comprenden entre el siguiente rango: [2..16]\n");
-    printf("        Si utiliza '-s', debe ingresar una base correcta <number> en el siguiente argumento.\n");
-    printf("        Si no lo utiliza, el programa utiliza de forma predeterminada base 10.\n\n");
+    printf("-s      Indica que la siguiente entrada es la base origen del numero ingresado. \n");
+    printf("        Las bases validas se comprenden entre el siguiente rango: [2 ... 16] \n");
+    printf("        Si utiliza '-s', debe ingresar una base correcta, <number> en el siguiente argumento. \n");
+    printf("        Si no lo utiliza, el programa utiliza de forma predeterminada base 10. \n\n");
 
-    printf("-d      Indica que la siguiente entrada es la base destino del numero ingresado.\n");
-    printf("        Las bases validas se comprenden entre el siguiente rango: [2..16]\n");
-    printf("        Si utiliza '-d', debe ingresar una base correcta <number> en el siguiente argumento.\n");
-    printf("        Si no lo utiliza, el programa utiliza de forma predeterminada base 10.\n\n");
+    printf("-d      Indica que la siguiente entrada es la base destino del numero ingresado. \n");
+    printf("        Las bases validas se comprenden entre el siguiente rango: [2 ... 16] \n");
+    printf("        Si utiliza '-d', debe ingresar una base correcta, <number> en el siguiente argumento. \n");
+    printf("        Si no lo utiliza, el programa utiliza de forma predeterminada base 10. \n\n");
 
-    printf("-v      Indica al programa que se debe ejecutar en modo 'verbose', mostrando los calculos intermedios del proceso de conversion.\n\n");
+    printf("-v      Indica al programa que se debe ejecutar en modo 'verbose', mostrando los calculos intermedios del proceso de conversion. \n\n");
 
-    printf("-h      Indica al programa que se debe mostrar el menu de ayuda.\n\n");
+    printf("-h      Indica al programa que se debe mostrar el menu de ayuda. \n\n");
 
     printf ("\n");
-    printf("-> Para informacion adicional acerca del funcionamiento del programa, consultar el informe especifico.\n\n");
+    printf("-> Para informacion adicional acerca del funcionamiento del programa, consultar el informe especifico. \n\n");
 }
 
 void procesarEntrada (char * numero , short * baseOrigen , short * baseDestino , short * verbose , short * help) {
