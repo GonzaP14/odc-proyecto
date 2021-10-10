@@ -28,7 +28,7 @@ double * parteFraccionariaOrigenA10 (char * numero, short * baseOrigen , short *
 
         if (*mostrar == 1 && (*contador != *limite)){
             printf("%hd x %hd ^ (%hd) + " , *digito , *baseOrigen , (*contador + 1) *(-1));
-        } else {
+        } else if(*mostrar == 1){
             printf("%hd x %hd ^ (%hd)" , *digito , *baseOrigen , (*contador + 1) *(-1));
         }
 
@@ -38,10 +38,10 @@ double * parteFraccionariaOrigenA10 (char * numero, short * baseOrigen , short *
         numero --;
     }
 
-    if (strlen (numero) - 1 != 0) {
+    if (strlen (numero) - 1 != 0 && *mostrar == 1) {
         printf (" = (%lf) 10 \n", *resultado);
     }
-    else {
+    else if(*mostrar == 1){
         printf("%s * %hd ^ (-1) = (0) 10 \n" , numero, *baseOrigen);
     }
 

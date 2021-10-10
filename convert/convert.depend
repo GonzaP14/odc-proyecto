@@ -222,3 +222,60 @@
 	<stdio.h>
 	<stdlib.h>
 
+1633909527 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\convert\conversor.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"metodoMultiplicacionPE.h"
+	"metodoMultiplicacionPF.h"
+	"metodoDivisionPE.h"
+	"metodoDivisionPF.h"
+	"Validacion.h"
+
+1633897597 c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\convert\metodomultiplicacionpe.h
+
+1633897597 c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\convert\metodomultiplicacionpf.h
+
+1633897597 c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\convert\metododivisionpe.h
+
+1633897597 c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\convert\metododivisionpf.h
+
+1633897597 c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\convert\validacion.h
+
+1633904877 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\convert\convert.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Conversor.h"
+
+1633904877 c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\convert\conversor.h
+
+1633897597 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\convert\metododivisionpe.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"metodosAuxiliares.h"
+
+1633897597 c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\convert\metodosauxiliares.h
+
+1633897597 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\convert\metodomultiplicacionpe.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<string.h>
+	"metodosAuxiliares.h"
+
+1633897597 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\convert\metodomultiplicacionpf.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+
+1633897597 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\convert\metodosauxiliares.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1633897597 source:c:\users\nmess\onedrive\escritorio\universidad\2do cuatrimestre 2do año\odc\proyectoodc\odc-proyecto\convert\validacion.c
+	<stdio.h>
+	<stdlib.h>
+
