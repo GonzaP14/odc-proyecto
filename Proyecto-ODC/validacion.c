@@ -29,8 +29,9 @@ void verificarNumeroBase11a16 (char * numero, short * baseOrigen, short * result
 
         numero ++;
     }
-    free(checkLetras);
-    free(checkNumeros);
+
+    free (checkLetras);
+    free (checkNumeros);
 }
 
 short * verificarNumero (char * numero, short * baseOrigen) {

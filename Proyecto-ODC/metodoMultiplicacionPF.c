@@ -36,7 +36,7 @@ char * parteFraccionaria10ADestino (double * numero, short * baseDestino, short 
         }
 
         if ((* mostrar == 1)) {
-            printf ("(%i) 10 = (%lf) 10, por lo que X(%i) = Piso (%lf) = (%c) \n", *baseDestino, *resultadoActual, - (*contador + 1), *resultadoActual , *resultado);
+            printf ("(%i) 10 = (%lf) 10, por lo que X(%i) = Piso (%lf) = (%c) %i \n", *baseDestino, *resultadoActual, - (*contador + 1), *resultadoActual , *resultado, *baseDestino);
         }
 
         resultado ++;
@@ -45,6 +45,11 @@ char * parteFraccionaria10ADestino (double * numero, short * baseDestino, short 
 
     *resultado = '\0';
     resultado = resultado - *contador;
+
+    if (*mostrar == 1) {
+        printf ("Luego, (%lf) 10 = (0.%s) %hi \n", *numero, resultado, *baseDestino);
+    }
+
     free (resultadoActual);
     free (digitoActual);
     free (contador);

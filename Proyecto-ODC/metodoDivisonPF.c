@@ -3,50 +3,59 @@
 #include <string.h>
 #include "metodosAuxiliares.h"
 
-double * parteFraccionariaOrigenA10 (char * parteFraccionaria , short * baseOrigen , short * mostrar){
-    short int* sizeFraccion;
-    short int* contador;
+double * parteFraccionariaOrigenA10 (char * numero, short * baseOrigen , short * mostrar){
+    short * sizeFraccion;
+    short * contador;
     double* resultado;
-    short int* digito;
+    short * digito;
+    char * auxiliar;
 
-    resultado = (double*) malloc( sizeof(double));
-    sizeFraccion = (short int*) malloc(sizeof(short int));
-    contador = (short int*) malloc(sizeof(short int));
-    digito = (short int*) malloc(sizeof(short int));
+    resultado = (double*) malloc (sizeof (double));
+    sizeFraccion = (short *) malloc (sizeof (short));
+    contador = (short *) malloc (sizeof (short));
+    digito = (short *) malloc (sizeof (short));
 
     *sizeFraccion = 0;
     *contador = 0;
     *resultado = 0.00;
     *digito = 0;
-    *sizeFraccion = strlen(parteFraccionaria);
-    parteFraccionaria = parteFraccionaria + *sizeFraccion - 1;
+    *sizeFraccion = strlen(numero);
 
-    while( *contador < *sizeFraccion ){
-        convertirCaracter( digito , parteFraccionaria );
+    auxiliar = numero;
+    numero = numero + *sizeFraccion - 1;
+
+    while (*contador < *sizeFraccion){
+        convertirCaracter (digito, numero);
 
         if (*mostrar == 1){
             printf("%hd x %hd ^ (%hd) " , *digito , *baseOrigen , *sizeFraccion *(-1));
         }
 
-        if (*mostrar == 1 && *contador+1 != *sizeFraccion){
+        if (*mostrar == 1 && (*contador + 1 != *sizeFraccion)){
             printf(" + ");
         }
 
         *resultado += *digito;
         *resultado /= *baseOrigen;
-        *sizeFraccion-= 1;
-        parteFraccionaria--;
-    }
-    if(*mostrar == 1 && *sizeFraccion != 0){
-        printf(" = %lf\n",*resultado);
-    }
-    else if(*mostrar == 1){
-        printf("%hd x %hd ^ (%hd) = %lf\n" , *digito , *baseOrigen , *sizeFraccion *(-1), *resultado );
+        *sizeFraccion -= 1;
+        numero --;
     }
 
-    free(digito);
-    free(sizeFraccion);
-    free(contador);
+    if (*mostrar == 1 && *sizeFraccion != 0){
+        printf(" = (%lf) 10 \n",*resultado);
+    }
+    else if (*mostrar == 1){
+        printf("%hd x %hd ^ (%hd) = (%lf) 10 \n" , *digito, *baseOrigen, *sizeFraccion *(-1), *resultado);
+    }
+
+    if (*mostrar == 1) {
+        numero ++;
+        printf ("Luego, (0.%s) %hi = (%lf) 10 \n", auxiliar, *baseOrigen, *resultado);
+    }
+
+    free (digito);
+    free (sizeFraccion);
+    free (contador);
 
     return resultado;
 }
