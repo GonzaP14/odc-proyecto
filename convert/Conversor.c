@@ -89,7 +89,7 @@ char * convertirParteEntera (char * numPE, short * baseOrigen, short * baseDesti
         resultado = parteEntera10aDestino (auxiliar, baseDestino, mostrar);
     }
 
-    free(auxiliar);
+    free (auxiliar);
 
     return resultado;
 }
@@ -115,13 +115,13 @@ char * convertirParteFraccionaria (char * numPF, short * baseOrigen, short * bas
         resultado = parteFraccionaria10ADestino (auxiliar, baseDestino, precision, mostrar);
     }
 
-    free(auxiliar);
-    free(precision);
+    free (auxiliar);
+    free (precision);
 
     return resultado;
 }
 
-char * convertir (char * numero, short * baseOrigen, short * baseDestino, short * mostrar) {
+char * convertir (char * numero, short * baseOrigen, short * baseDestino, short * mostrar, short * procesoCompleto) {
     short * checkPE;
     short * checkPF;
     char * numPE;
@@ -148,18 +148,18 @@ char * convertir (char * numero, short * baseOrigen, short * baseDestino, short 
         }
         else {
             resultado = strcat (strcat (numPEConvertido, "."), numPFConvertido);
+            free (numPFConvertido);
         }
 
     } else {
-        printf ("El numero no verifica las condiciones de su base origen: %i.", *baseOrigen);
-        exit (EXIT_FAILURE);
+        printf ("El numero no verifica las condiciones de su base origen: %i. \n\n", *baseOrigen);
+        *procesoCompleto = 0;
     }
 
     free (checkPE);
     free (checkPF);
     free (numPE);
     free (numPF);
-    free (numPFConvertido);
 
     return resultado;
 }

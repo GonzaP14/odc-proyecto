@@ -33,11 +33,11 @@ void validarBase (char * base, short * check) {
 void mostrarEntrada (char * numero , short * baseOrigen , short * baseDestino , short * verbose , short * help) {
     printf("La entrada es: \n");
     printf("Numero = %s \n", numero);
-    printf("Base origen = %hd \n", *baseOrigen);
-    printf("Base destino = %hd \n", *baseDestino);
+    printf("Base Origen = %hd \n", *baseOrigen);
+    printf("Base Destino = %hd \n", *baseDestino);
     printf("Modo Verbose = ");
 
-    if (*verbose == 1){
+    if (*verbose == 1) {
         printf ("Encendido \n");
     }
     else {
@@ -46,10 +46,10 @@ void mostrarEntrada (char * numero , short * baseOrigen , short * baseDestino , 
 
     printf("Help = ");
 
-    if (*help == 1){
+    if (*help == 1) {
         printf("Encendido \n");
     }
-    else{
+    else {
         printf("Apagado \n");
     }
 
@@ -85,7 +85,7 @@ void mostrarHelp(){
     printf("-> Para informacion adicional acerca del funcionamiento del programa, consultar el informe especifico. \n\n");
 }
 
-void procesarEntrada (char * numero , short * baseOrigen , short * baseDestino , short * verbose , short * help) {
+void procesarEntrada (char * numero , short * baseOrigen , short * baseDestino , short * verbose , short * help, short * procesoCompleto) {
     char * resultado;
 
     mostrarEntrada (numero, baseOrigen, baseDestino, verbose, help);
@@ -96,9 +96,12 @@ void procesarEntrada (char * numero , short * baseOrigen , short * baseDestino ,
     }
     else {
         if (*help == 1) mostrarHelp ();
-        resultado = convertir (numero, baseOrigen, baseDestino, verbose);
-        printf ("El numero %s en base %hd es igual a %s en base %hd. \n\n", numero, *baseOrigen, resultado, *baseDestino);
-        free (resultado);
+        resultado = convertir (numero, baseOrigen, baseDestino, verbose, procesoCompleto);
+
+        if (*procesoCompleto == 1) {
+            printf ("El numero %s en base %hd es igual a %s en base %hd. \n\n", numero, *baseOrigen, resultado, *baseDestino);
+            free (resultado);
+        }
     }
 }
 
@@ -218,7 +221,7 @@ int main (int argc, char ** argv) {
         if (*procesoCompleto == 0) {
             printf ("-> Alguna de las entradas no verifica las condiciones necesarias. \n");
         } else {
-             procesarEntrada (numero, baseOrigen, baseDestino, verbose, help);
+             procesarEntrada (numero, baseOrigen, baseDestino, verbose, help, procesoCompleto);
         }
 
     }
@@ -246,11 +249,11 @@ int main (int argc, char ** argv) {
     if (*procesoCompleto == 1) {
         free (procesoCompleto);
         printf ("-> El programa fue ejecutado exitosamente. \n");
-        return (EXIT_SUCCESS);
+        exit (EXIT_SUCCESS);
     }
     else {
         free (procesoCompleto);
         printf ("-> El programa no fue ejecutado exitosamente. \n");
-        return (EXIT_FAILURE);
+        exit (EXIT_FAILURE);
     }
 }

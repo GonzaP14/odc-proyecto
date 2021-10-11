@@ -9,7 +9,7 @@ char * parteFraccionaria10ADestino (double * numero, short * baseDestino, short 
     short * digitoActual;
     short * contador;
 
-    resultado = (char *) malloc ((* precision) * sizeof (char));
+    resultado = (char *) malloc ((*precision + 1) * sizeof (char));
     numeroAux = (double *) malloc (sizeof (double));
     resultadoActual = (double *) malloc (sizeof (double));
     digitoActual = (short *) malloc (sizeof (short));

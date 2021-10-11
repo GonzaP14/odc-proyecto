@@ -53,8 +53,9 @@ Realiza la conversion del numero a la base destino.
 @param baseOrigen: Base de la cual partimos para hacer la conversion.
 @param baseDestino: Base a la cual vamos a llegar con la conversion.
 @param mostrar: Es utilizado para saber si debemos hacer el verbose o no en el metodo.
+@param procesoCompleto: Es utilizado para saber si se pudo realizar exitosamente la conversion.
 @return: Puntero a char asociado al resultado de las conversiones correspondientes del numero ingresado.
 */
-char * convertir (char * numero, short * baseOrigen, short * baseDestino, short * mostrar);
+char * convertir (char * numero, short * baseOrigen, short * baseDestino, short * mostrar, short * procesoCompleto);
 
 #endif // CONVERSOR_H_INCLUDED
