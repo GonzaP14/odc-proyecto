@@ -159,7 +159,7 @@
 
 1633837087 c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\conversor.h
 
-1633897830 source:c:\users\gonzalo perez\documents\odc\proyecto\convert\conversor.c
+1633909338 source:c:\users\gonzalo perez\documents\odc\proyecto\convert\conversor.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -187,7 +187,7 @@
 
 1633898661 c:\users\gonzalo perez\documents\odc\proyecto\convert\conversor.h
 
-1633894175 source:c:\users\gonzalo perez\documents\odc\proyecto\convert\metododivisionpe.c
+1633923747 source:c:\users\gonzalo perez\documents\odc\proyecto\convert\metododivisionpe.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -195,7 +195,7 @@
 
 1633821406 c:\users\gonzalo perez\documents\odc\proyecto\convert\metodosauxiliares.h
 
-1633907811 source:c:\users\gonzalo perez\documents\odc\proyecto\convert\metododivisonpf.c
+1633923426 source:c:\users\gonzalo perez\documents\odc\proyecto\convert\metododivisonpf.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

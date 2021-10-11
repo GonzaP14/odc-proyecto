@@ -6,20 +6,21 @@
 char * parteEntera10aDestino (long long * numero, short * baseDestino, short * mostrar){
     long long * numeroAux;
     long long * auxiliar;
-    short * sizeNumero;
+    short * contador;
     char* resultado;
 
-    sizeNumero = (short *) malloc (sizeof(short));
+    contador = (short *) malloc (sizeof(short));
     resultado = (char *) malloc (45 * sizeof(char));
     auxiliar = (long long *) malloc (sizeof (long long));
 
     *auxiliar = *numero;
     numeroAux = numero;
-    *sizeNumero = 0;
+    *contador = 0;
 
-    while (*numeroAux > 0){
+    while (*numeroAux > 0) {
+
         if (*mostrar == 1){
-            printf("X%hd = %I64d mod %hd", *sizeNumero , *numeroAux , *baseDestino);
+            printf("X%hd = %I64d mod %hd", *contador , *numeroAux , *baseDestino);
         }
 
         *resultado = (*numeroAux % *baseDestino);
@@ -27,12 +28,12 @@ char * parteEntera10aDestino (long long * numero, short * baseDestino, short * m
         if (*resultado >= 10 && *baseDestino > 10){
             convertirLetra (resultado);
         }
-        else{
+        else {
             *resultado = *resultado + '0';
         }
 
         if (*mostrar == 1){
-            printf (" = %c y Q%hd = (%I64d - %c) / %hd ", *resultado , *sizeNumero , *numeroAux , *resultado , *baseDestino);
+            printf (" = %c y Q%hd = (%I64d - %c) / %hd ", *resultado , *contador , *numeroAux , *resultado , *baseDestino);
         }
 
         *numeroAux /= *baseDestino;
@@ -42,19 +43,19 @@ char * parteEntera10aDestino (long long * numero, short * baseDestino, short * m
         }
 
         resultado ++;
-        *sizeNumero += 1;
+        *contador += 1;
     }
 
-    if (*sizeNumero == 0 && *mostrar == 1) {
+    if (*contador == 0 && *mostrar == 1) {
         *resultado = '0';
-        printf("X%hd = %I64d mod %hd ", *sizeNumero , *numeroAux , *baseDestino);
-        resultado++;
-        *sizeNumero+=1;
+        printf("X%hd = %I64d mod %hd ", *contador , *numeroAux , *baseDestino);
+        resultado ++;
+        *contador += 1;
         printf ("= (%I64d) %hd \n" , *numeroAux, *baseDestino);
     }
 
     *resultado = '\0';
-    resultado -= *sizeNumero ;
+    resultado -= *contador ;
     strrev (resultado);
 
     if (*mostrar == 1) {
@@ -62,7 +63,7 @@ char * parteEntera10aDestino (long long * numero, short * baseDestino, short * m
     }
 
     free (auxiliar);
-    free (sizeNumero);
+    free (contador);
 
     return resultado;
 }

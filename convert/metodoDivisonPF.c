@@ -38,14 +38,8 @@ double * parteFraccionariaOrigenA10 (char * numero, short * baseOrigen , short *
         numero --;
     }
 
-    if (strlen (numero) - 1 != 0 && *mostrar == 1) {
-        printf (" = (%lf) 10 \n", *resultado);
-    }
-    else if(*mostrar == 1){
-        printf("%s * %hd ^ (-1) = (0) 10 \n" , numero, *baseOrigen);
-    }
-
     if (*mostrar == 1) {
+        printf (" = (%lf) 10 \n", *resultado);
         printf ("Luego, (0.%s) %hi = (%lf) 10 \n", auxiliar, *baseOrigen, *resultado);
     }
 
