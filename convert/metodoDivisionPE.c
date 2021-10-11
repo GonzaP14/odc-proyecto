@@ -26,7 +26,7 @@ char * parteEntera10aDestino (long long * numero, short * baseDestino, short * m
         *resultado = (*numeroAux % *baseDestino);
 
         if (*resultado >= 10 && *baseDestino > 10){
-            convertirLetra (resultado);
+            convertirNumeroALetra (resultado);
         }
         else {
             *resultado = *resultado + '0';

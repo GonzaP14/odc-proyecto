@@ -32,12 +32,12 @@ long long * parteEnteraOrigenA10 (char * numero, short * baseOrigen, short * mos
            printf("%I64i + " , *resultado);
         }
 
-        convertirCaracter (digitoActual, numeroAux);
+        convertirLetraANumero (digitoActual, numeroAux);
         * pot = (pow (* baseOrigen, * cantidadCaracteres));
         * resultado = * resultado + ((* digitoActual) * (* pot));
 
         if (*mostrar == 1){
-            printf("(%hi * %hi^%hi) = (%I64i) 10 \n" , *digitoActual, *baseOrigen, *cantidadCaracteres, *resultado);
+            printf ("(%hi * %hi^%hi) = (%I64i) 10 \n" , *digitoActual, *baseOrigen, *cantidadCaracteres, *resultado);
         }
 
         * cantidadCaracteres = * cantidadCaracteres - 1;

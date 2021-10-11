@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 
-void convertirCaracter (short * numero, char * digito) {
+void convertirLetraANumero (short * numero, char * digito) {
     if (*digito >= '0' && *digito <= '9'){
-        *numero = *digito- '0';
+        *numero = *digito - '0';
     }
     else if (*digito >= 'A' && *digito <= 'F'){
         *numero = *digito - 55;
@@ -14,12 +14,12 @@ void convertirCaracter (short * numero, char * digito) {
     }
 }
 
-void convertirLetra (char * numero){
-    char* resultado;
+void convertirNumeroALetra (char * numero){
+    char * resultado;
 
     resultado = numero;
 
     if(*resultado >= 10 && *resultado < 16){
-        *resultado = 'A' + *resultado - 10;
+        *resultado = 'A' + (*resultado - 10);
     }
 }

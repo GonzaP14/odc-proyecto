@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include "metodosAuxiliares.h"
 
 char * parteFraccionaria10ADestino (double * numero, short * baseDestino, short * precision, short * mostrar) {
     char * resultado;
@@ -32,7 +33,8 @@ char * parteFraccionaria10ADestino (double * numero, short * baseDestino, short 
             *resultado = *digitoActual + '0';
         }
         else {
-            *resultado = 'A' + (*digitoActual - 10);
+            *resultado = *digitoActual;
+            convertirNumeroALetra (resultado);
         }
 
         if ((* mostrar == 1)) {

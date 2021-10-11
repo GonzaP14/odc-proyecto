@@ -159,7 +159,7 @@
 
 1633837087 c:\users\gonzalo perez\documents\odc\proyecto\proyecto-odc\conversor.h
 
-1633925003 source:c:\users\gonzalo perez\documents\odc\proyecto\convert\conversor.c
+1633925281 source:c:\users\gonzalo perez\documents\odc\proyecto\convert\conversor.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -187,33 +187,34 @@
 
 1633925225 c:\users\gonzalo perez\documents\odc\proyecto\convert\conversor.h
 
-1633923871 source:c:\users\gonzalo perez\documents\odc\proyecto\convert\metododivisionpe.c
+1633989735 source:c:\users\gonzalo perez\documents\odc\proyecto\convert\metododivisionpe.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"metodosAuxiliares.h"
 
-1633821406 c:\users\gonzalo perez\documents\odc\proyecto\convert\metodosauxiliares.h
+1633989836 c:\users\gonzalo perez\documents\odc\proyecto\convert\metodosauxiliares.h
 
-1633923426 source:c:\users\gonzalo perez\documents\odc\proyecto\convert\metododivisonpf.c
+1633989757 source:c:\users\gonzalo perez\documents\odc\proyecto\convert\metododivisonpf.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"metodosAuxiliares.h"
 
-1633895201 source:c:\users\gonzalo perez\documents\odc\proyecto\convert\metodomultiplicacionpe.c
+1633989788 source:c:\users\gonzalo perez\documents\odc\proyecto\convert\metodomultiplicacionpe.c
 	<stdio.h>
 	<stdlib.h>
 	<math.h>
 	<string.h>
 	"metodosAuxiliares.h"
 
-1633925057 source:c:\users\gonzalo perez\documents\odc\proyecto\convert\metodomultiplicacionpf.c
+1633989803 source:c:\users\gonzalo perez\documents\odc\proyecto\convert\metodomultiplicacionpf.c
 	<stdio.h>
 	<stdlib.h>
 	<math.h>
+	"metodosAuxiliares.h"
 
-1633820975 source:c:\users\gonzalo perez\documents\odc\proyecto\convert\metodosauxiliares.c
+1633989718 source:c:\users\gonzalo perez\documents\odc\proyecto\convert\metodosauxiliares.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

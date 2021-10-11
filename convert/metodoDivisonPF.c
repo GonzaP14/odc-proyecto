@@ -24,7 +24,7 @@ double * parteFraccionariaOrigenA10 (char * numero, short * baseOrigen , short *
     numero = numero + *contador;
 
     while (*contador >= *limite){
-        convertirCaracter (digito, numero);
+        convertirLetraANumero (digito, numero);
 
         if (*mostrar == 1 && (*contador != *limite)){
             printf("%hd x %hd ^ (%hd) + " , *digito , *baseOrigen , (*contador + 1) *(-1));
